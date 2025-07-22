@@ -1,0 +1,102 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "Chi Siamo", 
+    "tour": "Tour",
+    "music": "Musica",
+    "gallery": "Galleria",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "title": "Higher Power",
+    "subtitle": "L'Esperienza Tribute Coldplay Definitiva - Vi portiamo la magia dei più grandi successi dei Coldplay con passione e autenticità.",
+    "button": "Vedi Date Tour"
+  },
+  "about": {
+    "title": "Chi Siamo",
+    "subtitle": "Incontra i musicisti appassionati dietro Higher Power",
+    "our_story": "La Nostra Storia",
+    "story_text1": "Higher Power è nata da un amore condiviso per l'incredibile musica dei Coldplay e dal desiderio di portare quella stessa energia ed emozione al pubblico dal vivo. La nostra band è composta da musicisti dedicati che hanno trascorso anni a perfezionare la loro arte.",
+    "story_text2": "Dalle melodie travolgenti di 'Fix You' all'energia contagiosa di 'Viva La Vida', ricreiamo l'esperienza Coldplay con meticolosa attenzione ai dettagli e genuina passione per la musica.",
+    "band_members": "Membri della Band",
+    "years_experience": "Anni di Esperienza",
+    "concerts_played": "Concerti Suonati",
+    "happy_fans": "Fan Felici"
+  },
+  "tour": {
+    "title": "Date del Tour",
+    "subtitle": "Non perdere i nostri prossimi spettacoli in tutta Italia",
+    "sold_out": "Sold Out",
+    "few_tickets": "Pochi Biglietti Rimasti", 
+    "tickets_available": "Biglietti Disponibili",
+    "buy_tickets": "Compra Biglietti"
+  },
+  "music": {
+    "title": "La Nostra Musica",
+    "subtitle": "Scopri i nostri album tribute e le canzoni più popolari",
+    "our_albums": "I Nostri Album",
+    "popular_songs": "Canzoni Popolari",
+    "listen_now": "Ascolta Ora",
+    "play": "Riproduci"
+  },
+  "gallery": {
+    "title": "Galleria",
+    "subtitle": "Rivivi la magia delle nostre performance",
+    "all": "Tutto",
+    "concerts": "Concerti", 
+    "backstage": "Backstage",
+    "fans": "Fan",
+    "videos": "Video"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Mettiti in contatto per prenotazioni e informazioni",
+    "form": {
+      "title": "Inviaci un messaggio",
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Oggetto",
+      "selectSubject": "Seleziona Oggetto",
+      "booking": "Richiesta Prenotazione",
+      "collaboration": "Collaborazione",
+      "media": "Richiesta Media",
+      "other": "Altro",
+      "message": "Messaggio",
+      "send": "Invia Messaggio"
+    },
+    "info": {
+      "title": "Informazioni di Contatto"
+    },
+    "email": "Email",
+    "phone": "Telefono",
+    "location": "Posizione",
+    "social": {
+      "title": "Seguici",
+      "followers": "follower",
+      "followUs": "Seguici sui social per gli aggiornamenti!"
+    },
+    "booking": {
+      "title": "Prenotazione Rapida",
+      "description": "Vuoi prenotarci per un evento? Contattaci rapidamente!",
+      "email": "Invia Email",
+      "call": "Chiama Ora"
+    },
+    "availability": {
+      "title": "Disponibilità Prenotazioni",
+      "description": "Stiamo attualmente accettando prenotazioni per concerti, festival ed eventi privati. Contattaci per disponibilità e informazioni sui prezzi.",
+      "available": "Disponibili per Prenotazioni",
+      "response": "Tempo di Risposta 24h"
+    }
+  },
+  "footer": {
+    "description": "Higher Power vi porta l'esperienza tribute Coldplay definitiva con performance autentiche che catturano la magia e l'emozione dei più grandi successi dei Coldplay.",
+    "tribute_disclaimer": "Questa è una tribute band. Non siamo affiliati con i Coldplay.",
+    "quick_links": "Link Rapidi",
+    "follow_us": "Seguici",
+    "email": "Email",
+    "phone": "Telefono", 
+    "rights_reserved": "Tutti i diritti riservati.",
+    "made_with": "Fatto con",
+    "for_music": "per la musica"
+  }
+}
