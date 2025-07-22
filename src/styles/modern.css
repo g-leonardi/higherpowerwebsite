@@ -1320,28 +1320,29 @@
 
   /* ===== CONTACT SECTION ===== */
   .contact-section {
-    padding: 4rem 0;
+    padding: 8rem 0 2rem 0;
     background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
     position: relative;
     overflow: hidden;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .contact-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 1.5rem;
+    border-radius: 15px;
+    padding: 1rem;
     text-align: center;
     transition: all 0.3s ease;
     animation: fadeInUp 0.6s ease-out;
@@ -1355,26 +1356,26 @@
   }
 
   .contact-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
     filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.5));
   }
 
   .contact-method-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
   }
 
   .contact-detail {
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .contact-btn {
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
     background: linear-gradient(135deg, #00f5ff, #ff00aa);
     color: #000;
     border: none;
@@ -1484,6 +1485,194 @@
     box-shadow: 0 15px 30px rgba(0, 245, 255, 0.3);
   }
 
+  /* Catchy Contact Form */
+  .contact-form-catchy {
+    grid-column: span 3;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 0, 170, 0.1));
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    border-radius: 20px;
+    padding: 1.5rem;
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInScale 0.8s ease-out 0.2s both;
+  }
+
+  .contact-form-catchy::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+    animation: shimmer 3s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  .contact-form-catchy > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .form-header-catchy {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-icon-animated {
+    font-size: 2rem;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .form-title-group {
+    flex: 1;
+  }
+
+  .form-title-catchy {
+    font-size: 1.4rem;
+    margin: 0 0 0.3rem 0;
+    background: linear-gradient(135deg, #00f5ff, #ff00aa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+
+  .form-subtitle-catchy {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+
+  .catchy-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-input-catchy {
+    background: rgba(0, 20, 40, 0.6);
+    border: 1px solid rgba(0, 245, 255, 0.3);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .form-input-catchy:focus {
+    outline: none;
+    border-color: #00f5ff;
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .form-input-catchy::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .form-textarea-catchy {
+    background: rgba(0, 20, 40, 0.6);
+    border: 1px solid rgba(0, 245, 255, 0.3);
+    border-radius: 12px;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 80px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .form-textarea-catchy:focus {
+    outline: none;
+    border-color: #00f5ff;
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .form-textarea-catchy::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .form-submit-catchy {
+    background: linear-gradient(135deg, #00f5ff, #ff00aa);
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .form-submit-catchy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .form-submit-catchy:hover::before {
+    left: 100%;
+  }
+
+  .form-submit-catchy:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 245, 255, 0.4);
+  }
+
+  .btn-icon {
+    font-size: 1.1rem;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-3px); }
+    60% { transform: translateY(-2px); }
+  }
+
   .contact-social {
     text-align: center;
     animation: fadeInUp 0.8s ease-out 0.4s both;
@@ -1506,22 +1695,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+    width: 50px;
+    height: 50px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     text-decoration: none;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .social-icon svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
   }
 
   .social-icon:hover {
     transform: translateY(-5px) scale(1.1);
-    background: linear-gradient(135deg, #00f5ff, #ff00aa);
     border-color: transparent;
     box-shadow: 0 10px 20px rgba(0, 245, 255, 0.3);
+  }
+
+  .facebook-icon:hover {
+    background: #1877f2;
+    color: white;
+  }
+
+  .instagram-icon:hover {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color: white;
   }
 
   .contact-blob-1 {
@@ -1555,9 +1759,21 @@
     }
   }
 
+  /* Tablet breakpoint */
+  @media (max-width: 1024px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .contact-form-catchy {
+      padding: 1.8rem;
+    }
+  }
+
   @media (max-width: 768px) {
     .contact-section {
-      padding: 3rem 0;
+      padding: 5rem 0 3rem 0;
       min-height: auto;
     }
 
@@ -1577,14 +1793,51 @@
       padding: 1.2rem;
     }
 
+    .contact-form-catchy {
+      grid-column: span 1;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .form-header-catchy {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .form-title-catchy {
+      font-size: 1.2rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+
+    .form-input-catchy,
+    .form-textarea-catchy {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .form-submit-catchy {
+      padding: 0.9rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
     .social-icons {
       gap: 0.6rem;
     }
 
     .social-icon {
-      width: 35px;
-      height: 35px;
-      font-size: 1.1rem;
+      width: 45px;
+      height: 45px;
+    }
+
+    .social-icon svg {
+      width: 20px;
+      height: 20px;
     }
   }
 
