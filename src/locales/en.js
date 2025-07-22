@@ -13,7 +13,9 @@ export default {
   hero: {
     title: "Higher Power",
     subtitle: "The Ultimate Coldplay Tribute Experience - Bringing you the magic of Coldplay's greatest hits with passion and authenticity.",
-    button: "See Tour Dates"
+    button: "See Tour Dates",
+    showreel_title: "Live Performance Highlights",
+    showreel_description: "Experience our authentic Coldplay tribute performance"
   },
 
   // About Section
@@ -41,7 +43,9 @@ export default {
     view_event: "View Event",
     private_events: "Private Events & Booking",
     private_events_desc: "Looking to book Higher Power for your private event, festival, or venue? We offer customized performances for all occasions.",
-    contact_booking: "Contact for Booking"
+    contact_booking: "Contact for Booking",
+    booking_question: "Want to book us for your venue or event?",
+    contact_us_bookings: "Contact Us for Bookings"
   },
 
   // Music Section
@@ -72,7 +76,22 @@ export default {
   // Contact Section
   contact: {
     title: "Contact Us",
-    subtitle: "Get in touch for bookings and inquiries",
+    subtitle: "Ready to bring the Coldplay experience to your event?",
+    email_us: "Email Us",
+    call_us: "Call Us", 
+    book_now: "Book Now",
+    available_across_italy: "Available across Italy",
+    send_email: "Send Email",
+    call_now: "Call Now",
+    get_quote: "Get Quote",
+    magic_title: "Let's Create Magic Together",
+    magic_subtitle: "Your dream event is just one message away ✨",
+    name_placeholder: "🎯 What's your name, rockstar?",
+    email_placeholder: "📧 Your email (we promise no spam!)",
+    phone_placeholder: "📱 Phone number (optional)",
+    message_placeholder: "🎤 Tell us about your epic event... Birthday? Wedding? Corporate party? We're ready to rock! 🔥",
+    launch_event: "Launch Your Event",
+    follow_journey: "Follow our journey",
     send_message: "Send us a Message",
     name: "Name",
     name_placeholder: "Your full name",
@@ -91,8 +110,6 @@ export default {
     form_success: "Thank you! We'll get back to you soon.",
     get_in_touch: "Get in Touch",
     get_in_touch_desc: "We'd love to hear from you. Whether you're looking to book us for an event or just want to connect, don't hesitate to reach out.",
-    email_us: "Email Us",
-    call_us: "Call Us",
     visit_us: "Visit Us", 
     available_nationwide: "Available nationwide",
     follow_social: "Follow Us",

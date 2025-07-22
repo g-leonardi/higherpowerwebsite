@@ -113,13 +113,13 @@ export default function TourSection() {
         {/* Call to Action */}
         <div className="text-center mt-16 animate-fade-in-up animation-delay-1000">
           <p className="text-muted text-lg mb-6">
-            Want to book us for your venue or event?
+            {t('tour.booking_question')}
           </p>
           <a 
             href="#contact" 
             className="btn btn-primary btn-primary-hover magnetic-btn"
           >
-            Contact Us for Bookings
+            {t('tour.contact_us_bookings')}
           </a>
         </div>
       </div>

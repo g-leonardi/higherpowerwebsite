@@ -13,7 +13,9 @@ export default {
   hero: {
     title: "Higher Power",
     subtitle: "L'Esperienza Tribute Coldplay Definitiva - Vi portiamo la magia dei più grandi successi dei Coldplay con passione e autenticità.",
-    button: "Vedi Date Tour"
+    button: "Vedi Date Tour",
+    showreel_title: "Highlights Performance Live",
+    showreel_description: "Vivi la nostra autentica performance tribute dei Coldplay"
   },
 
   // About Section
@@ -41,7 +43,9 @@ export default {
     view_event: "Vedi Evento",
     private_events: "Eventi Privati e Prenotazioni",
     private_events_desc: "Vuoi prenotare Higher Power per il tuo evento privato, festival o locale? Offriamo performance personalizzate per ogni occasione.",
-    contact_booking: "Contatta per Prenotazioni"
+    contact_booking: "Contatta per Prenotazioni",
+    booking_question: "Vuoi prenotarci per il tuo locale o evento?",
+    contact_us_bookings: "Contattaci per Prenotazioni"
   },
 
   // Music Section
@@ -72,7 +76,22 @@ export default {
   // Contact Section
   contact: {
     title: "Contattaci",
-    subtitle: "Mettiti in contatto per prenotazioni e informazioni",
+    subtitle: "Pronto a portare l'esperienza Coldplay al tuo evento?",
+    email_us: "Scrivici",
+    call_us: "Chiamaci",
+    book_now: "Prenota Ora",
+    available_across_italy: "Disponibili in tutta Italia",
+    send_email: "Invia Email",
+    call_now: "Chiama Ora", 
+    get_quote: "Richiedi Preventivo",
+    magic_title: "Creiamo Magia Insieme",
+    magic_subtitle: "Il tuo evento da sogno è solo a un messaggio di distanza ✨",
+    name_placeholder: "🎯 Come ti chiami, rockstar?",
+    email_placeholder: "📧 La tua email (promettiamo zero spam!)",
+    phone_placeholder: "📱 Numero di telefono (opzionale)",
+    message_placeholder: "🎤 Raccontaci del tuo evento epico... Compleanno? Matrimonio? Festa aziendale? Siamo pronti a rockeggiare! 🔥",
+    launch_event: "Lancia il Tuo Evento",
+    follow_journey: "Segui il nostro viaggio",
     send_message: "Inviaci un Messaggio",
     name: "Nome",
     name_placeholder: "Il tuo nome completo",
@@ -91,8 +110,6 @@ export default {
     form_success: "Grazie! Ti risponderemo presto.",
     get_in_touch: "Mettiti in Contatto",
     get_in_touch_desc: "Ci piacerebbe sentirti. Che tu stia cercando di prenotarci per un evento o semplicemente vuoi connetterti, non esitare a contattarci.",
-    email_us: "Scrivici",
-    call_us: "Chiamaci",
     visit_us: "Vieni a Trovarci", 
     available_nationwide: "Disponibili in tutta Italia",
     follow_social: "Seguici",

@@ -11,7 +11,7 @@ export default function ContactSection() {
             {t('contact.title')}
           </h2>
           <p className="section-subtitle">
-            Ready to bring the Coldplay experience to your event?
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -19,23 +19,23 @@ export default function ContactSection() {
           {/* Quick Contact Cards */}
           <div className="contact-card glass-card">
             <div className="contact-icon">✉️</div>
-            <h3 className="contact-method-title">Email Us</h3>
+            <h3 className="contact-method-title">{t('contact.email_us')}</h3>
             <p className="contact-detail">info@higherpower.band</p>
-            <button className="contact-btn">Send Email</button>
+            <button className="contact-btn">{t('contact.send_email')}</button>
           </div>
 
           <div className="contact-card glass-card">
             <div className="contact-icon">📱</div>
-            <h3 className="contact-method-title">Call Us</h3>
+            <h3 className="contact-method-title">{t('contact.call_us')}</h3>
             <p className="contact-detail">+39 123 456 7890</p>
-            <button className="contact-btn">Call Now</button>
+            <button className="contact-btn">{t('contact.call_now')}</button>
           </div>
 
           <div className="contact-card glass-card">
             <div className="contact-icon">🎤</div>
-            <h3 className="contact-method-title">Book Now</h3>
-            <p className="contact-detail">Available across Italy</p>
-            <button className="contact-btn">Get Quote</button>
+            <h3 className="contact-method-title">{t('contact.book_now')}</h3>
+            <p className="contact-detail">{t('contact.available_across_italy')}</p>
+            <button className="contact-btn">{t('contact.get_quote')}</button>
           </div>
 
           {/* Catchy Message Form */}
@@ -43,8 +43,8 @@ export default function ContactSection() {
             <div className="form-header-catchy">
               <div className="form-icon-animated">💫</div>
               <div className="form-title-group">
-                <h3 className="form-title-catchy glow-text">Let's Create Magic Together</h3>
-                <p className="form-subtitle-catchy">Your dream event is just one message away ✨</p>
+                <h3 className="form-title-catchy glow-text">{t('contact.magic_title')}</h3>
+                <p className="form-subtitle-catchy">{t('contact.magic_subtitle')}</p>
               </div>
             </div>
             <form className="catchy-form">
@@ -52,25 +52,25 @@ export default function ContactSection() {
                 <input 
                   type="text" 
                   className="form-input-catchy"
-                  placeholder="🎯 What's your name, rockstar?"
+                  placeholder={t('contact.name_placeholder')}
                 />
                 <input 
                   type="email" 
                   className="form-input-catchy"
-                  placeholder="📧 Your email (we promise no spam!)"
+                  placeholder={t('contact.email_placeholder')}
                 />
                 <input 
                   type="tel" 
                   className="form-input-catchy"
-                  placeholder="📱 Phone number (optional)"
+                  placeholder={t('contact.phone_placeholder')}
                 />
               </div>
               <textarea 
                 className="form-textarea-catchy"
-                placeholder="🎤 Tell us about your epic event... Birthday? Wedding? Corporate party? We're ready to rock! 🔥"
+                placeholder={t('contact.message_placeholder')}
               ></textarea>
               <button type="submit" className="form-submit-catchy">
-                <span className="btn-text">Launch Your Event</span>
+                <span className="btn-text">{t('contact.launch_event')}</span>
                 <span className="btn-icon">🚀</span>
               </button>
             </form>
@@ -78,7 +78,7 @@ export default function ContactSection() {
 
           {/* Social Links */}
           <div className="contact-social">
-            <p className="social-title">Follow our journey</p>
+            <p className="social-title">{t('contact.follow_journey')}</p>
             <div className="social-icons">
               <a href="#" className="social-icon facebook-icon" title="Facebook">
                 <svg viewBox="0 0 24 24" fill="currentColor">
