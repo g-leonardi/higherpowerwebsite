@@ -7,38 +7,38 @@ export default function TourSection() {
     {
       date: "2025-08-15",
       venue: "Teatro Romano",
-      city: "Verona",
-      status: "available"
+      city: "Verona, Italy",
+      eventUrl: "https://example.com/verona-concert"
     },
     {
       date: "2025-08-22", 
-      venue: "Auditorium Parco della Musica",
-      city: "Roma",
-      status: "sold-out"
+      venue: "O2 Arena",
+      city: "London, UK",
+      eventUrl: "https://example.com/london-concert"
     },
     {
       date: "2025-09-05",
       venue: "Mediolanum Forum", 
-      city: "Milano",
-      status: "available"
+      city: "Milano, Italy",
+      eventUrl: "https://example.com/milano-concert"
     },
     {
       date: "2025-09-12",
-      venue: "Teatro Massimo",
-      city: "Palermo", 
-      status: "few-tickets"
+      venue: "AccorHotels Arena",
+      city: "Paris, France", 
+      eventUrl: "https://example.com/paris-concert"
     },
     {
       date: "2025-09-19",
-      venue: "Unipol Arena",
-      city: "Bologna",
-      status: "available"
+      venue: "Mercedes-Benz Arena",
+      city: "Berlin, Germany",
+      eventUrl: "https://example.com/berlin-concert"
     },
     {
       date: "2025-09-26", 
-      venue: "Mediolanum Forum",
-      city: "Milano",
-      status: "few-tickets"
+      venue: "Ziggo Dome",
+      city: "Amsterdam, Netherlands",
+      eventUrl: "https://example.com/amsterdam-concert"
     }
   ]
 
@@ -50,29 +50,6 @@ export default function TourSection() {
       month: 'short',
       day: 'numeric'
     })
-  }
-
-  const getStatusClass = (status) => {
-    const baseClass = "status-badge"
-    switch (status) {
-      case 'sold-out':
-        return `${baseClass} status-sold-out`
-      case 'few-tickets':
-        return `${baseClass} status-few-tickets`
-      default:
-        return `${baseClass} status-available`
-    }
-  }
-
-  const getStatusText = (status) => {
-    switch (status) {
-      case 'sold-out':
-        return t('tour.sold_out')
-      case 'few-tickets':
-        return t('tour.few_tickets')
-      default:
-        return t('tour.tickets_available')
-    }
   }
 
   return (
@@ -93,49 +70,44 @@ export default function TourSection() {
           </p>
         </div>
 
-        {/* Tour Dates */}
-        <div className="space-y-6">
-          {tourDates.map((concert, index) => (
-            <div
-              key={index}
-              className="card card-primary card-glass card-hover group animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <div className="text-primary font-semibold text-lg group-hover:text-yellow-300 transition-colors duration-300">
+        {/* Tour Dates - Scrollable Container */}
+        <div className="tour-container">
+          <div className="tour-scroll-wrapper">
+            {tourDates.map((concert, index) => (
+              <div
+                key={index}
+                className="tour-card"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="tour-card-content">
+                  <div className="tour-info">
+                    <div className="tour-date">
                       {formatDate(concert.date)}
                     </div>
-                    <div className="text-white">
-                      <div className="text-xl font-semibold group-hover:text-cyan-300 transition-colors duration-300">
+                    <div className="tour-venue">
+                      <div className="venue-name">
                         {concert.venue}
                       </div>
-                      <div className="text-muted text-muted-hover">
+                      <div className="venue-city">
                         {concert.city}
                       </div>
                     </div>
                   </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <span className={getStatusClass(concert.status)}>
-                    {getStatusText(concert.status)}
-                  </span>
-                  <button
-                    className={`btn ${
-                      concert.status === 'sold-out'
-                        ? 'btn-disabled'
-                        : 'btn-primary btn-primary-hover magnetic-btn neon-glow'
-                    }`}
-                    disabled={concert.status === 'sold-out'}
-                  >
-                    {concert.status === 'sold-out' ? t('tour.sold_out') : t('tour.buy_tickets')}
-                  </button>
+                  
+                  <div className="tour-action">
+                    <a
+                      href={concert.eventUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="tour-btn"
+                    >
+                      {t('tour.view_event')}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Call to Action */}

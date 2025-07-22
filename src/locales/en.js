@@ -37,11 +37,8 @@ export default {
   // Tour Section
   tour: {
     title: "Tour Dates",
-    subtitle: "Don't miss our upcoming performances across Italy",
-    sold_out: "Sold Out",
-    few_tickets: "Few Tickets Left", 
-    tickets_available: "Tickets Available",
-    buy_tickets: "Buy Tickets",
+    subtitle: "Don't miss our upcoming performances across Europe",
+    view_event: "View Event",
     private_events: "Private Events & Booking",
     private_events_desc: "Looking to book Higher Power for your private event, festival, or venue? We offer customized performances for all occasions.",
     contact_booking: "Contact for Booking"
