@@ -7,8 +7,8 @@ export default function Footer() {
     { label: t('navigation.home'), href: "#home" },
     { label: t('navigation.about'), href: "#about" },
     { label: t('navigation.tour'), href: "#tour" },
-    { label: t('navigation.music'), href: "#music" },
     { label: t('navigation.gallery'), href: "#gallery" },
+    { label: t('navigation.downloads'), href: "#downloads" },
     { label: t('navigation.contact'), href: "#contact" },
   ]
 

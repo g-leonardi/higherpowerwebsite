@@ -17,8 +17,8 @@ export default function Navbar() {
     { key: "home", href: "#", labelKey: "navigation.home" },
     { key: "about", href: "#about", labelKey: "navigation.about" },
     { key: "tour", href: "#tour", labelKey: "navigation.tour" },
-    { key: "music", href: "#music", labelKey: "navigation.music" },
     { key: "gallery", href: "#gallery", labelKey: "navigation.gallery" },
+    { key: "downloads", href: "#downloads", labelKey: "navigation.downloads" },
     { key: "contact", href: "#contact", labelKey: "navigation.contact" },
   ], [])
 

@@ -15,6 +15,7 @@ import AboutSection from "./components/sections/AboutSection"
 import TourSection from "./components/sections/TourSection"
 import ContactSection from "./components/sections/ContactSection"
 import GallerySection from "./components/sections/GallerySection"
+import DownloadsSection from "./components/sections/DownloadsSection"
 
 export default function App() {
   const { t, i18n } = useTranslation()
@@ -32,8 +33,8 @@ export default function App() {
         <HeroSection />
         <AboutSection />
         <TourSection />
-        {/* <MusicSection /> */}
         <GallerySection />
+        <DownloadsSection />
         <ContactSection />
       </main>
       <Footer />

@@ -463,6 +463,7 @@
     padding: 8rem 0;
     background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
     overflow: hidden;
+    scroll-margin-top: 150px;
   }
 
   .section:nth-child(even) {
@@ -735,11 +736,25 @@
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
   }
 
   .photo-frame:hover {
     border-color: rgba(0, 245, 255, 0.3);
     transform: scale(1.02);
+  }
+
+  .band-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  .photo-frame:hover .band-photo-img {
+    transform: scale(1.05);
   }
 
   .photo-placeholder {
@@ -808,6 +823,23 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #00f5ff, #ff00aa);
     margin-bottom: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+
+  .member-card-horizontal:hover .member-photo {
+    transform: scale(1.1);
   }
 
   .member-info-horizontal {
@@ -1505,6 +1537,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    scroll-margin-top: 150px;
   }
 
   .contact-grid {
@@ -2810,6 +2843,220 @@
     .lightbox-image {
       width: 250px;
       height: 200px;
+    }
+  }
+
+  /* ===== DOWNLOADS SECTION - 2025 STYLE ===== */
+  .downloads-section {
+    padding: 8rem 2rem 2rem 2rem;
+    background: linear-gradient(135deg, #1a0033 0%, #000033 100%);
+    border-top: 1px solid rgba(138, 43, 226, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .download-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .download-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(138, 43, 226, 0.1),
+      transparent
+    );
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+  }
+
+  .download-card:hover::before {
+    opacity: 1;
+    animation: shimmer 1.5s ease-in-out;
+  }
+
+  .download-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 
+      0 25px 50px rgba(138, 43, 226, 0.4),
+      0 0 80px rgba(138, 43, 226, 0.2);
+    border-color: rgba(138, 43, 226, 0.6);
+  }
+
+  .download-icon {
+    font-size: 2.5rem;
+    color: #8a2be2;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+    background: linear-gradient(45deg, #8a2be2, #1e90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .download-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    background: linear-gradient(45deg, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .download-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+
+  .download-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .download-btn {
+    background: linear-gradient(45deg, #8a2be2, #1e90ff);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left 0.5s;
+  }
+
+  .download-btn:hover::before {
+    left: 100%;
+  }
+
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
+  }
+
+  .downloads-cta {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(138, 43, 226, 0.2);
+  }
+
+  .downloads-cta-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+
+  .downloads-cta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .downloads-cta-btn {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #00f5ff, #ff00aa);
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+    margin-top: 0;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .downloads-cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 245, 255, 0.3);
+    color: #000;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+  }
+
+  /* Downloads Section Responsive */
+  @media (max-width: 1024px) {
+    .downloads-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      max-width: 800px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .downloads-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      max-width: 400px;
+      gap: 1rem;
+    }
+    
+    .downloads-section {
+      padding: 2rem 1rem;
+      scroll-margin-top: 100px;
     }
   }
 

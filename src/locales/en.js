@@ -2,14 +2,13 @@ export default {
   // Navigation
   navigation: {
     home: "Home",
-    about: "About", 
+    about: "About",
     tour: "Tour",
     music: "Music",
     gallery: "Gallery",
+    downloads: "Downloads",
     contact: "Contact"
-  },
-
-  // Hero Section
+  },  // Hero Section
   hero: {
     title: "Higher Power",
     subtitle: "The Ultimate Coldplay Tribute Experience - Bringing you the magic of Coldplay's greatest hits with passion and authenticity.",
@@ -71,6 +70,27 @@ export default {
     rehearsals: "Rehearsals",
     follow_social: "Follow Us on Social Media",
     follow_desc: "Stay updated with our latest photos, videos, and behind-the-scenes content"
+  },
+
+  // Downloads Section
+  downloads: {
+    title: "Downloads",
+    subtitle: "Professional materials for venues, promoters, and media",
+    technical_sheet: "Technical Sheet",
+    technical_sheet_desc: "Complete stage plan and technical requirements",
+    poster: "Promotional Poster",
+    poster_desc: "High-quality poster for event promotion",
+    logo: "Official Logo",
+    logo_desc: "Higher Power official logo in high resolution",
+    banner_horizontal: "Horizontal Banner",
+    banner_horizontal_desc: "Perfect for websites and social media covers",
+    banner_square: "Square Banner", 
+    banner_square_desc: "Ideal for Instagram posts and square formats",
+    banner_vertical: "Vertical Banner",
+    banner_vertical_desc: "Great for stories and vertical displays",
+    download: "Download",
+    need_more: "Need additional materials or custom formats?",
+    contact_us: "Contact Us"
   },
 
   // Contact Section

@@ -50,7 +50,11 @@ export default function AboutSection() {
           <div className="about-right">
             <div className="band-photo">
               <div className="photo-frame">
-                <span className="photo-placeholder">Higher Power Band</span>
+                <img 
+                  src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=center"
+                  alt="Higher Power Band performing live"
+                  className="band-photo-img"
+                />
               </div>
             </div>
           </div>
@@ -64,28 +68,52 @@ export default function AboutSection() {
           </h3>
           <div className="members-row">
             <div className="member-card-horizontal">
-              <div className="member-avatar-small"></div>
+              <div className="member-avatar-small">
+                <img 
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
+                  alt="Band member"
+                  className="member-photo"
+                />
+              </div>
               <div className="member-info-horizontal">
                 <h4 className="member-name">{t('about.member1.name')}</h4>
                 <p className="member-role">{t('about.member1.role')}</p>
               </div>
             </div>
             <div className="member-card-horizontal">
-              <div className="member-avatar-small"></div>
+              <div className="member-avatar-small">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+                  alt="Band member"
+                  className="member-photo"
+                />
+              </div>
               <div className="member-info-horizontal">
                 <h4 className="member-name">{t('about.member2.name')}</h4>
                 <p className="member-role">{t('about.member2.role')}</p>
               </div>
             </div>
             <div className="member-card-horizontal">
-              <div className="member-avatar-small"></div>
+              <div className="member-avatar-small">
+                <img 
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
+                  alt="Band member"
+                  className="member-photo"
+                />
+              </div>
               <div className="member-info-horizontal">
                 <h4 className="member-name">{t('about.member3.name')}</h4>
                 <p className="member-role">{t('about.member3.role')}</p>
               </div>
             </div>
             <div className="member-card-horizontal">
-              <div className="member-avatar-small"></div>
+              <div className="member-avatar-small">
+                <img 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face"
+                  alt="Band member"
+                  className="member-photo"
+                />
+              </div>
               <div className="member-info-horizontal">
                 <h4 className="member-name">{t('about.member4.name')}</h4>
                 <p className="member-role">{t('about.member4.role')}</p>
