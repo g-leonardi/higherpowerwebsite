@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
 export default function Navbar() {
@@ -12,14 +12,15 @@ export default function Navbar() {
     setMenuOpen(false)
   }
 
-  const navLinks = [
-    { label: t("navigation.home"), href: "#" },
-    { label: t("navigation.about"), href: "#about" },
-    { label: t("navigation.tour"), href: "#tour" },
-    { label: t("navigation.music"), href: "#music" },
-    { label: t("navigation.gallery"), href: "#gallery" },
-    { label: t("navigation.contact"), href: "#contact" },
-  ]
+  // Create stable navigation structure with language-based key for animations
+  const navLinks = useMemo(() => [
+    { key: "home", href: "#", labelKey: "navigation.home" },
+    { key: "about", href: "#about", labelKey: "navigation.about" },
+    { key: "tour", href: "#tour", labelKey: "navigation.tour" },
+    { key: "music", href: "#music", labelKey: "navigation.music" },
+    { key: "gallery", href: "#gallery", labelKey: "navigation.gallery" },
+    { key: "contact", href: "#contact", labelKey: "navigation.contact" },
+  ], [])
 
   return (
     <header className="nav-header">
@@ -30,14 +31,14 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="nav-menu">
-          {navLinks.map(({ label, href }, index) => (
+          {navLinks.map(({ key, href, labelKey }, index) => (
             <a 
-              key={label} 
+              key={`${key}-${language}`} 
               href={href} 
               className="nav-link"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {label}
+              {t(labelKey)}
             </a>
           ))}
 
@@ -73,15 +74,15 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <nav className="nav-mobile">
-          {navLinks.map(({ label, href }, index) => (
+          {navLinks.map(({ key, href, labelKey }, index) => (
             <a
-              key={label}
+              key={`${key}-${language}`}
               href={href}
               className="nav-mobile-link"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => setMenuOpen(false)}
             >
-              {label}
+              {t(labelKey)}
             </a>
           ))}
 

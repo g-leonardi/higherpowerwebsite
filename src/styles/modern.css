@@ -351,6 +351,273 @@
     }
   }
 
+  /* ===== COMPACT ABOUT LAYOUT ===== */
+  .about-compact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .about-compact {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: stretch;
+    }
+  }
+
+  /* Left Column - Bio */
+  .about-left {
+    animation: slideInLeft 0.8s ease-out;
+    display: flex;
+  }
+
+  .about-bio {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 1;
+    max-width: 400px;
+  }
+
+  .bio-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #00f5ff;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .bio-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding: 0.8rem 0 0 0;
+    border-top: 1px solid rgba(0, 245, 255, 0.2);
+  }
+
+  .stat-item {
+    text-align: center;
+    flex: 1;
+    position: relative;
+    padding: 0.6rem 0.2rem;
+    border-radius: 10px;
+    background: rgba(0, 245, 255, 0.05);
+    border: 1px solid rgba(0, 245, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .stat-item:hover {
+    background: rgba(0, 245, 255, 0.1);
+    border-color: rgba(0, 245, 255, 0.3);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 245, 255, 0.2);
+  }
+
+  .stat-item:nth-child(2) {
+    background: rgba(255, 0, 170, 0.05);
+    border-color: rgba(255, 0, 170, 0.1);
+  }
+
+  .stat-item:nth-child(2):hover {
+    background: rgba(255, 0, 170, 0.1);
+    border-color: rgba(255, 0, 170, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 0, 170, 0.2);
+  }
+
+  .stat-item:nth-child(3) {
+    background: rgba(255, 215, 0, 0.05);
+    border-color: rgba(255, 215, 0, 0.1);
+  }
+
+  .stat-item:nth-child(3):hover {
+    background: rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00f5ff, #ff00aa, #ffd700);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    text-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+    animation: numberPulse 2s ease-in-out infinite;
+  }
+
+  .stat-item:nth-child(1) .stat-number {
+    animation-delay: 0s;
+  }
+
+  .stat-item:nth-child(2) .stat-number {
+    animation-delay: 0.3s;
+  }
+
+  .stat-item:nth-child(3) .stat-number {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes numberPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+  }
+
+  /* Right Column - Band Photo */
+  .about-right {
+    animation: slideInRight 0.8s ease-out 0.2s both;
+    display: flex;
+  }
+
+  .band-photo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .photo-frame {
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 400px;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 0, 170, 0.1));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .photo-frame:hover {
+    border-color: rgba(0, 245, 255, 0.3);
+    transform: scale(1.02);
+  }
+
+  .photo-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  /* Center Band Members Section */
+  .band-members-center {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+    text-align: center;
+  }
+
+  .band-members-center .members-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ff00aa;
+    margin-bottom: 2rem;
+  }
+
+  .members-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    .members-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .members-row {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  .member-card-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .member-card-horizontal:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 245, 255, 0.3);
+    transform: translateY(-5px);
+  }
+
+  .member-card-horizontal .member-avatar-small {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00f5ff, #ff00aa);
+    margin-bottom: 1rem;
+  }
+
+  .member-info-horizontal {
+    text-align: center;
+  }
+
+  .member-info-horizontal .member-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .member-info-horizontal .member-role {
+    font-size: 0.9rem;
+    color: #00f5ff;
+    font-weight: 500;
+    margin: 0;
+  }
+
   .about-story {
     animation: slideInLeft 0.8s ease-out;
   }

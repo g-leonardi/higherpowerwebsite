@@ -15,73 +15,81 @@ export default function AboutSection() {
           <h2 className="section-title">
             {t('about.title')}
           </h2>
-          <p className="section-subtitle">
-            {t('about.subtitle')}
-          </p>
         </div>
 
-        <div className="about-content">
-          {/* Story Section */}
-          <div className="about-story">
-            <h3 className="story-title">
-              {t('about.our_story')}
-            </h3>
-            <p className="story-text">
-              {t('about.story_text1')}
-            </p>
-            <p className="story-text">
-              {t('about.story_text2')}
-            </p>
-            <div className="stats-badges">
-              <span className="stat-badge">
-                {t('about.years_experience')}
-              </span>
-              <span className="stat-badge">
-                {t('about.concerts_played')}
-              </span>
-              <span className="stat-badge">
-                {t('about.happy_fans')}
-              </span>
+        {/* Compact About Layout */}
+        <div className="about-compact">
+          
+          {/* Left Column: Bio + Stats */}
+          <div className="about-left">
+            <div className="about-bio">
+              <h3 className="bio-title">
+                {t('about.our_story')}
+              </h3>
+              <p className="bio-text">
+                {t('about.story_text1')}
+              </p>
+              <div className="stats-row">
+                <div className="stat-item">
+                  <span className="stat-number">5+</span>
+                  <span className="stat-label">{t('about.years_experience')}</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">100+</span>
+                  <span className="stat-label">{t('about.concerts_played')}</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">50+</span>
+                  <span className="stat-label">{t('about.happy_fans')}</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Band Image */}
-          <div className="about-image">
-            <div className="img-placeholder">
-              <span className="placeholder-text">Band Photo</span>
+          {/* Right Column: Band Photo */}
+          <div className="about-right">
+            <div className="band-photo">
+              <div className="photo-frame">
+                <span className="photo-placeholder">Higher Power Band</span>
+              </div>
             </div>
           </div>
+
         </div>
 
-        {/* Band Members */}
-        <div className="band-members">
+        {/* Center Section: Band Members in Row */}
+        <div className="band-members-center">
           <h3 className="members-title">
             {t('about.meet_band')}
           </h3>
-          <div className="members-grid">
-            <div className="member-card">
-              <div className="member-avatar"></div>
-              <h4 className="member-name">Marco Rossi</h4>
-              <p className="member-role">Lead Vocals & Piano</p>
-              <p className="member-desc">Captures Chris Martin's vocal style perfectly</p>
+          <div className="members-row">
+            <div className="member-card-horizontal">
+              <div className="member-avatar-small"></div>
+              <div className="member-info-horizontal">
+                <h4 className="member-name">{t('about.member1.name')}</h4>
+                <p className="member-role">{t('about.member1.role')}</p>
+              </div>
             </div>
-            <div className="member-card">
-              <div className="member-avatar"></div>
-              <h4 className="member-name">Luca Bianchi</h4>
-              <p className="member-role">Lead Guitar</p>
-              <p className="member-desc">Master of Jonny Buckland's iconic riffs</p>
+            <div className="member-card-horizontal">
+              <div className="member-avatar-small"></div>
+              <div className="member-info-horizontal">
+                <h4 className="member-name">{t('about.member2.name')}</h4>
+                <p className="member-role">{t('about.member2.role')}</p>
+              </div>
             </div>
-            <div className="member-card">
-              <div className="member-avatar"></div>
-              <h4 className="member-name">Andrea Verdi</h4>
-              <p className="member-role">Drums</p>
-              <p className="member-desc">Powerful rhythms like Will Champion</p>
+            <div className="member-card-horizontal">
+              <div className="member-avatar-small"></div>
+              <div className="member-info-horizontal">
+                <h4 className="member-name">{t('about.member3.name')}</h4>
+                <p className="member-role">{t('about.member3.role')}</p>
+              </div>
             </div>
-            <div className="member-card">
-              <div className="member-avatar"></div>
-              <h4 className="member-name">Giulia Neri</h4>
-              <p className="member-role">Bass & Backing Vocals</p>
-              <p className="member-desc">Solid foundation and harmonies</p>
+            <div className="member-card-horizontal">
+              <div className="member-avatar-small"></div>
+              <div className="member-info-horizontal">
+                <h4 className="member-name">{t('about.member4.name')}</h4>
+                <p className="member-role">{t('about.member4.role')}</p>
+              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 export default {
   // Navigation
-  nav: {
+  navigation: {
     home: "Home",
     about: "Chi Siamo", 
     tour: "Tour",
@@ -11,21 +11,22 @@ export default {
 
   // Hero Section
   hero: {
-    title: "Vivi la Magia dei Coldplay",
-    subtitle: "Unisciti a noi per un viaggio musicale indimenticabile",
-    button: "Prenota Ora"
+    title: "Higher Power",
+    subtitle: "L'Esperienza Tribute Coldplay Definitiva - Vi portiamo la magia dei più grandi successi dei Coldplay con passione e autenticità.",
+    button: "Vedi Date Tour"
   },
 
   // About Section
   about: {
     title: "Chi Siamo",
-    subtitle: "Musicisti appassionati dedicati a dare vita alla magia dei Coldplay",
+    subtitle: "Incontra i musicisti appassionati dietro Higher Power",
     our_story: "La Nostra Storia",
-    story_text1: "Higher Power è nata da una passione condivisa per la musica dei Coldplay e dal desiderio di ricreare l'esperienza emotiva dei loro concerti. Dalla nostra formazione nel 2020, ci siamo dedicati a offrire performance autentiche che catturano l'essenza del suono e dell'energia dei Coldplay.",
-    story_text2: "I membri della nostra band sono musicisti esperti con anni di esperienza nelle performance dal vivo e nelle registrazioni in studio. Studiamo meticolosamente gli arrangiamenti, la presenza scenica e le sfumature musicali dei Coldplay per garantire che ogni performance sia il più possibile fedele all'originale.",
-    years_experience: "5+ Anni di Esperienza",
-    concerts_played: "100+ Concerti",
-    happy_fans: "50+ Brani in Repertorio",
+    story_text1: "Higher Power è nata da un amore condiviso per l'incredibile musica dei Coldplay e dal desiderio di portare quella stessa energia ed emozione al pubblico dal vivo. La nostra band è composta da musicisti dedicati che hanno trascorso anni a perfezionare la loro arte.",
+    story_text2: "Dalle melodie travolgenti di 'Fix You' all'energia contagiosa di 'Viva La Vida', ricreiamo l'esperienza Coldplay con meticolosa attenzione ai dettagli e genuina passione per la musica.",
+    band_members: "Membri della Band",
+    years_experience: "Anni di Esperienza",
+    concerts_played: "Concerti Suonati",
+    happy_fans: "Fan Felici",
     meet_band: "Incontra la Band",
     member1: { name: "Marco Rossi", role: "Voce e Piano", desc: "Cattura perfettamente lo stile vocale di Chris Martin" },
     member2: { name: "Luca Bianchi", role: "Chitarra Solista", desc: "Maestro dei riff iconici di Jonny Buckland" },
@@ -36,9 +37,9 @@ export default {
   // Tour Section
   tour: {
     title: "Date del Tour",
-    subtitle: "Non perdere le nostre prossime performance in tutta Italia",
+    subtitle: "Non perdere i nostri prossimi spettacoli in tutta Italia",
     sold_out: "Sold Out",
-    few_tickets: "Pochi Biglietti", 
+    few_tickets: "Pochi Biglietti Rimasti", 
     tickets_available: "Biglietti Disponibili",
     buy_tickets: "Compra Biglietti",
     private_events: "Eventi Privati e Prenotazioni",
@@ -49,22 +50,24 @@ export default {
   // Music Section
   music: {
     title: "La Nostra Musica",
-    subtitle: "Esplora le nostre autentiche performance tribute dei Coldplay",
+    subtitle: "Scopri i nostri album tribute e le canzoni più popolari",
     our_albums: "I Nostri Album",
+    popular_songs: "Canzoni Popolari",
     listen_now: "Ascolta Ora",
-    popular_songs: "Brani Popolari",
+    play: "Riproduci",
     listen_on: "Ascolta sulle Piattaforme Streaming"
   },
 
   // Gallery Section
   gallery: {
     title: "Galleria",
-    subtitle: "Momenti dalle nostre performance e dietro le quinte",
-    all: "Tutti",
-    concerts: "Concerti",
-    backstage: "Dietro le Quinte", 
+    subtitle: "Rivivi la magia delle nostre performance",
+    all: "Tutto",
+    concerts: "Concerti", 
+    backstage: "Backstage",
+    fans: "Fan",
+    videos: "Video",
     rehearsals: "Prove",
-    videos: "Video Live",
     follow_social: "Seguici sui Social Media",
     follow_desc: "Rimani aggiornato con le nostre ultime foto, video e contenuti dietro le quinte"
   },
@@ -72,7 +75,7 @@ export default {
   // Contact Section
   contact: {
     title: "Contattaci",
-    subtitle: "Mettiti in contatto per prenotazioni, collaborazioni o semplicemente per salutare",
+    subtitle: "Mettiti in contatto per prenotazioni e informazioni",
     send_message: "Inviaci un Messaggio",
     name: "Nome",
     name_placeholder: "Il tuo nome completo",
@@ -97,19 +100,54 @@ export default {
     available_nationwide: "Disponibili in tutta Italia",
     follow_social: "Seguici",
     response_time: "Risposta Rapida",
-    response_desc: "Rispondiamo tipicamente a tutte le richieste entro 24 ore durante i giorni lavorativi."
+    response_desc: "Rispondiamo tipicamente a tutte le richieste entro 24 ore durante i giorni lavorativi.",
+    form: {
+      title: "Inviaci un messaggio",
+      name: "Nome",
+      email: "Email",
+      subject: "Oggetto",
+      selectSubject: "Seleziona Oggetto",
+      booking: "Richiesta Prenotazione",
+      collaboration: "Collaborazione",
+      media: "Richiesta Media",
+      other: "Altro",
+      message: "Messaggio",
+      send: "Invia Messaggio"
+    },
+    info: {
+      title: "Informazioni di Contatto"
+    },
+    phone: "Telefono",
+    location: "Posizione",
+    social: {
+      title: "Seguici",
+      followers: "follower",
+      followUs: "Seguici sui social per gli aggiornamenti!"
+    },
+    booking: {
+      title: "Prenotazione Rapida",
+      description: "Vuoi prenotarci per un evento? Contattaci rapidamente!",
+      email: "Invia Email",
+      call: "Chiama Ora"
+    },
+    availability: {
+      title: "Disponibilità Prenotazioni",
+      description: "Stiamo attualmente accettando prenotazioni per concerti, festival ed eventi privati. Contattaci per disponibilità e informazioni sui prezzi.",
+      available: "Disponibili per Prenotazioni",
+      response: "Tempo di Risposta 24h"
+    }
   },
 
   // Footer
   footer: {
-    description: "La principale tribute band dei Coldplay che offre performance autentiche con passione e precisione. Portiamo la magia dei Coldplay sui palchi di tutta Italia.",
-    tribute_disclaimer: "Higher Power è una tribute band e non è affiliata ai Coldplay ufficiali.",
+    description: "Higher Power vi porta l'esperienza tribute Coldplay definitiva con performance autentiche che catturano la magia e l'emozione dei più grandi successi dei Coldplay.",
+    tribute_disclaimer: "Questa è una tribute band. Non siamo affiliati con i Coldplay.",
     quick_links: "Link Rapidi",
     follow_us: "Seguici",
     email: "Email",
     phone: "Telefono", 
     rights_reserved: "Tutti i diritti riservati.",
     made_with: "Fatto con",
-    for_music: "per gli amanti della musica"
+    for_music: "per la musica"
   }
 }

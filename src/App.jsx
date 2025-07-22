@@ -9,11 +9,12 @@ import "./styles/modern.css"
 
 // Components
 import Navbar from "./components/layout/Navbar"
-import Footer from "./Footer"
+import Footer from "./components/layout/Footer.jsx"
 import HeroSection from "./components/sections/HeroSection"
 import AboutSection from "./components/sections/AboutSection"
 import TourSection from "./components/sections/TourSection"
 import ContactSection from "./components/sections/ContactSection"
+import GallerySection from "./components/sections/GallerySection"
 
 export default function App() {
   const { t, i18n } = useTranslation()
@@ -31,6 +32,8 @@ export default function App() {
         <HeroSection />
         <AboutSection />
         <TourSection />
+        {/* <MusicSection /> */}
+        <GallerySection />
         <ContactSection />
       </main>
       <Footer />
