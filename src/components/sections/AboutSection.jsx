@@ -17,38 +17,18 @@ export default function AboutSection() {
           </h2>
         </div>
 
-        {/* Compact About Layout */}
-        <div className="about-compact">
-          
-          {/* Left Column: Bio + Stats */}
-          <div className="about-left">
-            <div className="about-bio">
+        {/* Modern 2025 unified quadrotto layout */}
+        <div className="about-quadrotto">
+          <div className="about-quadrotto-content">
+            <div className="about-quadrotto-text">
               <h3 className="bio-title">
                 {t('about.our_story')}
               </h3>
               <p className="bio-text">
-                {t('about.story_text1')}
+                {t('about.story_text1')}<br /><br />{t('about.story_text2')}
               </p>
-              <div className="stats-row">
-                <div className="stat-item">
-                  <span className="stat-number">5+</span>
-                  <span className="stat-label">{t('about.years_experience')}</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">100+</span>
-                  <span className="stat-label">{t('about.concerts_played')}</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">50+</span>
-                  <span className="stat-label">{t('about.happy_fans')}</span>
-                </div>
-              </div>
             </div>
-          </div>
-
-          {/* Right Column: Band Photo */}
-          <div className="about-right">
-            <div className="band-photo">
+            <div className="about-quadrotto-image">
               <div className="photo-frame">
                 <img 
                   src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=center"
@@ -58,7 +38,22 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-
+          <div className="about-quadrotto-stats">
+            <div className="stats-row">
+              <div className="stat-item">
+                <span className="stat-number">5+</span>
+                <span className="stat-label">{t('about.years_experience')}</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">100+</span>
+                <span className="stat-label">{t('about.concerts_played')}</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">50+</span>
+                <span className="stat-label">{t('about.happy_fans')}</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Center Section: Band Members in Row */}

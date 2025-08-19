@@ -1,3 +1,89 @@
+.about-quadrotto-stats {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  margin-top: 2.5rem;
+  background: rgba(0,245,255,0.07);
+  border-radius: 18px;
+  border: 1.2px solid rgba(0,245,255,0.13);
+  box-shadow: 0 4px 24px 0 rgba(0,245,255,0.04);
+  padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .about-quadrotto-stats {
+    padding: 2rem 2.5rem 1.7rem 2.5rem;
+  }
+}
+
+.about-quadrotto-stats .stats-row {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+/* ===== ABOUT QUADROTTO 2025 LAYOUT ===== */
+.about-quadrotto {
+  width: 100%;
+  margin: 0 auto 4rem auto;
+  background: rgba(255,255,255,0.04);
+  border-radius: 28px;
+  border: 1.5px solid rgba(0,245,255,0.13);
+  box-shadow: 0 8px 40px 0 rgba(0,245,255,0.07);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.about-quadrotto-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .about-quadrotto-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 3.5rem;
+  }
+  .about-quadrotto-text {
+    flex: 1.2;
+    min-width: 0;
+  }
+  .about-quadrotto-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+  }
+  .about-quadrotto .photo-frame {
+    max-width: 480px;
+    min-height: 260px;
+    aspect-ratio: 16/9;
+  }
+}
+
+.about-quadrotto-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-quadrotto-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ===== MODERN 2025 CSS RESET & BASE ===== */
 @layer base {
   * {
@@ -11,7 +97,8 @@
   }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Cormorant Garamond', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', serif;
+  font-weight: 700;
     background: #0a0a0a;
     color: #ffffff;
     overflow-x: hidden;
@@ -459,11 +546,12 @@
 
   /* ===== SECTION LAYOUTS ===== */
   .section {
-    position: relative;
-    padding: 8rem 0;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
-    overflow: hidden;
-    scroll-margin-top: 150px;
+  position: relative;
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
+  overflow: visible;
+  scroll-margin-top: 150px;
+  min-height: 900px;
   }
 
   .section:nth-child(even) {
@@ -531,50 +619,156 @@
 
   /* ===== COMPACT ABOUT LAYOUT ===== */
   .about-compact {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  min-height: 500px;
+  height: auto;
+  overflow: visible;
   }
 
   @media (min-width: 768px) {
     .about-compact {
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      gap: 2.5rem;
       align-items: stretch;
+      min-height: 0;
+    }
+    .about-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .band-photo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo-frame {
+      max-width: 420px;
+      min-height: 240px;
+      aspect-ratio: 16/9;
     }
   }
 
   @media (max-width: 767px) {
+    .about-compact {
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
     .about-bio {
-      padding: 1.5rem;
-      min-height: 200px;
+      padding: 1rem;
+      min-height: auto;
+      aspect-ratio: unset;
+    }
+
+    .bio-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      text-align: left;
+    }
+
+    .bio-text {
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      -webkit-line-clamp: unset;
+      line-clamp: unset;
+      display: block;
+      overflow: visible;
+    }
+
+    .stats-row {
+      gap: 0.3rem;
+      padding: 0.5rem 0 0 0;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      flex: 1;
+      min-width: 70px;
+      padding: 0.4rem 0.2rem;
+    }
+
+    .stat-number {
+      font-size: 1.2rem;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
     }
     
     .photo-frame {
-      min-height: 200px;
-    }
-    
-    .bio-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .bio-text {
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      -webkit-line-clamp: 4;
-      line-clamp: 4;
-    }
-    
-    .stats-row {
-      gap: 0.5rem;
-      padding: 0.8rem 0 0 0;
+      min-height: 180px;
+      aspect-ratio: 16/9;
     }
     
     .photo-placeholder {
-      font-size: 1.1rem;
+      font-size: 1rem;
+    }
+
+    .band-members-center {
+      margin-top: 1.5rem;
+    }
+
+    .band-members-center .members-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  /* Extra small screens like iPhone SE */
+  @media (max-width: 480px) {
+    .about-compact {
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-bio {
+      padding: 0.8rem;
+    }
+
+    .bio-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .bio-text {
+      font-size: 0.8rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .stats-row {
+      gap: 0.2rem;
+      padding: 0.4rem 0 0 0;
+    }
+
+    .stat-item {
+      padding: 0.3rem 0.1rem;
+      min-width: 60px;
+    }
+
+    .stat-number {
+      font-size: 1rem;
+    }
+
+    .stat-label {
+      font-size: 0.6rem;
+    }
+
+    .photo-frame {
+      min-height: 150px;
+    }
+
+    .band-members-center .members-title {
+      font-size: 1.3rem;
     }
   }
 
@@ -585,17 +779,27 @@
   }
 
   .about-bio {
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    aspect-ratio: 16/9;
-    min-height: 250px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-height: 370px;
+  overflow: visible;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: unset;
+  overflow: auto;
+  box-sizing: border-box;
+  position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .about-bio {
+      aspect-ratio: 16/9;
+    }
   }
 
   .bio-title {
@@ -612,11 +816,6 @@
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 1.5rem;
     flex-grow: 1;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .stats-row {

@@ -1,34 +1,34 @@
 export default {
   // Navigation
   navigation: {
-    home: "Home",
-    about: "About",
-    tour: "Tour",
-    music: "Music",
-    gallery: "Gallery",
-    downloads: "Downloads",
-    contact: "Contact"
+  home: "HOME",
+  about: "ABOUT",
+  tour: "TOUR",
+  music: "MUSIC",
+  gallery: "GALLERY",
+  downloads: "DOWNLOADS",
+  contact: "CONTACT"
   },  // Hero Section
   hero: {
-    title: "Higher Power",
-    subtitle: "The Ultimate Coldplay Tribute Experience - Bringing you the magic of Coldplay's greatest hits with passion and authenticity.",
-    button: "See Tour Dates",
-    showreel_title: "Live Performance Highlights",
-    showreel_description: "Experience our authentic Coldplay tribute performance"
+  title: "HIGHER POWER",
+  subtitle: "THE ULTIMATE COLDPLAY TRIBUTE EXPERIENCE - BRINGING YOU THE MAGIC OF COLDPLAY'S GREATEST HITS WITH PASSION AND AUTHENTICITY.",
+  button: "SEE TOUR DATES",
+  showreel_title: "LIVE PERFORMANCE HIGHLIGHTS",
+  showreel_description: "EXPERIENCE OUR AUTHENTIC COLDPLAY TRIBUTE PERFORMANCE"
   },
 
   // About Section
   about: {
-    title: "About Us",
-    subtitle: "Meet the passionate musicians behind Higher Power",
-    our_story: "Our Story",
-    story_text1: "Higher Power was born from a shared love for Coldplay's incredible music and the desire to bring that same energy and emotion to live audiences. Our band consists of dedicated musicians who have spent years perfecting their craft.",
-    story_text2: "From the soaring melodies of 'Fix You' to the infectious energy of 'Viva La Vida', we recreate the Coldplay experience with meticulous attention to detail and genuine passion for the music.",
-    band_members: "Band Members",
-    years_experience: "Years of Experience",
-    concerts_played: "Concerts Played",
-    happy_fans: "Happy Fans",
-    meet_band: "Meet the Band",
+  title: "ABOUT US",
+  subtitle: "MEET THE PASSIONATE MUSICIANS BEHIND HIGHER POWER",
+  our_story: "OUR STORY",
+  story_text1: "HIGHER POWER WAS BORN FROM A SHARED LOVE FOR COLDPLAY'S INCREDIBLE MUSIC AND THE DESIRE TO BRING THAT SAME ENERGY AND EMOTION TO LIVE AUDIENCES. OUR BAND CONSISTS OF DEDICATED MUSICIANS WHO HAVE SPENT YEARS PERFECTING THEIR CRAFT.",
+  story_text2: "FROM THE SOARING MELODIES OF 'FIX YOU' TO THE INFECTIOUS ENERGY OF 'VIVA LA VIDA', WE RECREATE THE COLDPLAY EXPERIENCE WITH METICULOUS ATTENTION TO DETAIL AND GENUINE PASSION FOR THE MUSIC.",
+  band_members: "BAND MEMBERS",
+  years_experience: "YEARS OF EXPERIENCE",
+  concerts_played: "CONCERTS PLAYED",
+  happy_fans: "HAPPY FANS",
+  meet_band: "MEET THE BAND",
     member1: { name: "Marco Rossi", role: "Lead Vocals & Piano", desc: "Captures Chris Martin's vocal style perfectly" },
     member2: { name: "Luca Bianchi", role: "Lead Guitar", desc: "Master of Jonny Buckland's iconic riffs" },
     member3: { name: "Andrea Verdi", role: "Drums", desc: "Powerful rhythms like Will Champion" },
@@ -37,60 +37,60 @@ export default {
 
   // Tour Section
   tour: {
-    title: "Tour Dates",
-    subtitle: "Don't miss our upcoming performances across Europe",
-    view_event: "View Event",
-    private_events: "Private Events & Booking",
-    private_events_desc: "Looking to book Higher Power for your private event, festival, or venue? We offer customized performances for all occasions.",
-    contact_booking: "Contact for Booking",
-    booking_question: "Want to book us for your venue or event?",
-    contact_us_bookings: "Contact Us for Bookings"
+  title: "TOUR DATES",
+  subtitle: "DON'T MISS OUR UPCOMING PERFORMANCES ACROSS EUROPE",
+  view_event: "VIEW EVENT",
+  private_events: "PRIVATE EVENTS & BOOKING",
+  private_events_desc: "LOOKING TO BOOK HIGHER POWER FOR YOUR PRIVATE EVENT, FESTIVAL, OR VENUE? WE OFFER CUSTOMIZED PERFORMANCES FOR ALL OCCASIONS.",
+  contact_booking: "CONTACT FOR BOOKING",
+  booking_question: "WANT TO BOOK US FOR YOUR VENUE OR EVENT?",
+  contact_us_bookings: "CONTACT US FOR BOOKINGS"
   },
 
   // Music Section
   music: {
-    title: "Our Music",
-    subtitle: "Discover our tribute albums and most popular songs",
-    our_albums: "Our Albums",
-    popular_songs: "Popular Songs",
-    listen_now: "Listen Now",
-    play: "Play",
-    listen_on: "Listen on Streaming Platforms"
+  title: "OUR MUSIC",
+  subtitle: "DISCOVER OUR TRIBUTE ALBUMS AND MOST POPULAR SONGS",
+  our_albums: "OUR ALBUMS",
+  popular_songs: "POPULAR SONGS",
+  listen_now: "LISTEN NOW",
+  play: "PLAY",
+  listen_on: "LISTEN ON STREAMING PLATFORMS"
   },
 
   // Gallery Section
   gallery: {
-    title: "Gallery",
-    subtitle: "Relive the magic of our performances",
-    all: "All",
-    concerts: "Concerts", 
-    backstage: "Backstage",
-    fans: "Fans",
-    videos: "Videos",
-    rehearsals: "Rehearsals",
-    follow_social: "Follow Us on Social Media",
-    follow_desc: "Stay updated with our latest photos, videos, and behind-the-scenes content"
+  title: "GALLERY",
+  subtitle: "RELIVE THE MAGIC OF OUR PERFORMANCES",
+  all: "ALL",
+  concerts: "CONCERTS", 
+  backstage: "BACKSTAGE",
+  fans: "FANS",
+  videos: "VIDEOS",
+  rehearsals: "REHEARSALS",
+  follow_social: "FOLLOW US ON SOCIAL MEDIA",
+  follow_desc: "STAY UPDATED WITH OUR LATEST PHOTOS, VIDEOS, AND BEHIND-THE-SCENES CONTENT"
   },
 
   // Downloads Section
   downloads: {
-    title: "Downloads",
-    subtitle: "Professional materials for venues, promoters, and media",
-    technical_sheet: "Technical Sheet",
-    technical_sheet_desc: "Complete stage plan and technical requirements",
-    poster: "Promotional Poster",
-    poster_desc: "High-quality poster for event promotion",
-    logo: "Official Logo",
-    logo_desc: "Higher Power official logo in high resolution",
-    banner_horizontal: "Horizontal Banner",
-    banner_horizontal_desc: "Perfect for websites and social media covers",
-    banner_square: "Square Banner", 
-    banner_square_desc: "Ideal for Instagram posts and square formats",
-    banner_vertical: "Vertical Banner",
-    banner_vertical_desc: "Great for stories and vertical displays",
-    download: "Download",
-    need_more: "Need additional materials or custom formats?",
-    contact_us: "Contact Us"
+  title: "DOWNLOADS",
+  subtitle: "PROFESSIONAL MATERIALS FOR VENUES, PROMOTERS, AND MEDIA",
+  technical_sheet: "TECHNICAL SHEET",
+  technical_sheet_desc: "COMPLETE STAGE PLAN AND TECHNICAL REQUIREMENTS",
+  poster: "PROMOTIONAL POSTER",
+  poster_desc: "HIGH-QUALITY POSTER FOR EVENT PROMOTION",
+  logo: "OFFICIAL LOGO",
+  logo_desc: "HIGHER POWER OFFICIAL LOGO IN HIGH RESOLUTION",
+  banner_horizontal: "HORIZONTAL BANNER",
+  banner_horizontal_desc: "PERFECT FOR WEBSITES AND SOCIAL MEDIA COVERS",
+  banner_square: "SQUARE BANNER", 
+  banner_square_desc: "IDEAL FOR INSTAGRAM POSTS AND SQUARE FORMATS",
+  banner_vertical: "VERTICAL BANNER",
+  banner_vertical_desc: "GREAT FOR STORIES AND VERTICAL DISPLAYS",
+  download: "DOWNLOAD",
+  need_more: "NEED ADDITIONAL MATERIALS OR CUSTOM FORMATS?",
+  contact_us: "CONTACT US"
   },
 
   // Contact Section

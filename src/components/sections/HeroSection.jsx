@@ -37,8 +37,8 @@ export default function HeroSection() {
               {/* YouTube embed for demonstration */}
               <iframe
                 className="showreel-video"
-                src="https://www.youtube.com/embed/RB-RcX5DS5A?si=8xQGb8cQvZZx8v-a"
-                title="Coldplay - Yellow (Official Video)"
+                src="https://www.youtube.com/embed/DnfpHyLbQqc?autoplay=1&mute=0"
+                title="Higher Power - European Coldplay Tribute Band"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

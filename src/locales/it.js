@@ -1,34 +1,34 @@
 export default {
   // Navigation
   navigation: {
-    home: "Home",
-    about: "Chi Siamo",
-    tour: "Tour",
-    music: "Musica",
-    gallery: "Galleria",
-    downloads: "Download",
-    contact: "Contatti"
+  home: "HOME",
+  about: "CHI SIAMO",
+  tour: "TOUR",
+  music: "MUSICA",
+  gallery: "GALLERIA",
+  downloads: "DOWNLOAD",
+  contact: "CONTATTI"
   },  // Hero Section
   hero: {
-    title: "Higher Power",
-    subtitle: "L'Esperienza Tribute Coldplay Definitiva - Vi portiamo la magia dei più grandi successi dei Coldplay con passione e autenticità.",
-    button: "Vedi Date Tour",
-    showreel_title: "Highlights Performance Live",
-    showreel_description: "Vivi la nostra autentica performance tribute dei Coldplay"
+  title: "HIGHER POWER",
+  subtitle: "La tribute band europea dedicata ai Coldplay, attiva dal 2020 con una missione chiara: offrire al pubblico un’esperienza live autentica, coinvolgente e fedele allo spirito della celebre band britannica.",
+  button: "VEDI DATE TOUR",
+  showreel_title: "HIGHLIGHTS PERFORMANCE LIVE",
+  showreel_description: "VIVI LA NOSTRA AUTENTICA PERFORMANCE TRIBUTE DEI COLDPLAY"
   },
 
   // About Section
   about: {
-    title: "Chi Siamo",
-    subtitle: "Incontra i musicisti appassionati dietro Higher Power",
-    our_story: "La Nostra Storia",
-    story_text1: "Higher Power è nata da un amore condiviso per l'incredibile musica dei Coldplay e dal desiderio di portare quella stessa energia ed emozione al pubblico dal vivo. La nostra band è composta da musicisti dedicati che hanno trascorso anni a perfezionare la loro arte.",
-    story_text2: "Dalle melodie travolgenti di 'Fix You' all'energia contagiosa di 'Viva La Vida', ricreiamo l'esperienza Coldplay con meticolosa attenzione ai dettagli e genuina passione per la musica.",
-    band_members: "Membri della Band",
-    years_experience: "Anni di Esperienza",
-    concerts_played: "Concerti Suonati",
-    happy_fans: "Fan Felici",
-    meet_band: "Incontra la Band",
+  title: "CHI SIAMO",
+  subtitle: "INCONTRA I MUSICISTI APPASSIONATI DIETRO HIGHER POWER",
+  our_story: "LA NOSTRA STORIA",
+  story_text1: "Dall’emozione struggente di Fix You all’energia esplosiva di Viva La Vida, ogni brano viene riprodotto con cura maniacale per i dettagli: arrangiamenti, strumenti, costumi, luci, maschere e persino i coriandoli fanno parte di uno spettacolo pensato per far rivivere tutta la magia di un vero concerto dei Coldplay.",
+  story_text2: "Nel corso degli anni, gli HIGHER POWER si sono esibiti in importanti festival ed eventi live in Italia, Francia e Svizzera, conquistando migliaia di spettatori grazie a performance potenti, suggestive e ricche di passione. Se ami i Coldplay, non puoi perderti l’esperienza unica di un live firmato HIGHER POWER.",
+  band_members: "MEMBRI DELLA BAND",
+  years_experience: "ANNI DI ESPERIENZA",
+  concerts_played: "CONCERTI SUONATI",
+  happy_fans: "NAZIONI",
+  meet_band: "INCONTRA LA BAND",
     member1: { name: "Marco Rossi", role: "Voce e Piano", desc: "Cattura perfettamente lo stile vocale di Chris Martin" },
     member2: { name: "Luca Bianchi", role: "Chitarra Solista", desc: "Maestro dei riff iconici di Jonny Buckland" },
     member3: { name: "Andrea Verdi", role: "Batteria", desc: "Ritmi potenti come Will Champion" },
@@ -37,60 +37,60 @@ export default {
 
   // Tour Section
   tour: {
-    title: "Date del Tour",
-    subtitle: "Non perdere i nostri prossimi spettacoli in tutta Europa",
-    view_event: "Vedi Evento",
-    private_events: "Eventi Privati e Prenotazioni",
-    private_events_desc: "Vuoi prenotare Higher Power per il tuo evento privato, festival o locale? Offriamo performance personalizzate per ogni occasione.",
-    contact_booking: "Contatta per Prenotazioni",
-    booking_question: "Vuoi prenotarci per il tuo locale o evento?",
-    contact_us_bookings: "Contattaci per Prenotazioni"
+  title: "DATE DEL TOUR",
+  subtitle: "NON PERDERE I NOSTRI PROSSIMI SPETTACOLI IN TUTTA EUROPA",
+  view_event: "VEDI EVENTO",
+  private_events: "EVENTI PRIVATI E PRENOTAZIONI",
+  private_events_desc: "VUOI PRENOTARE HIGHER POWER PER IL TUO EVENTO PRIVATO, FESTIVAL O LOCALE? OFFRIAMO PERFORMANCE PERSONALIZZATE PER OGNI OCCASIONE.",
+  contact_booking: "CONTATTA PER PRENOTAZIONI",
+  booking_question: "VUOI PRENOTARCI PER IL TUO LOCALE O EVENTO?",
+  contact_us_bookings: "CONTATTACI PER PRENOTAZIONI"
   },
 
   // Music Section
   music: {
-    title: "La Nostra Musica",
-    subtitle: "Scopri i nostri album tribute e le canzoni più popolari",
-    our_albums: "I Nostri Album",
-    popular_songs: "Canzoni Popolari",
-    listen_now: "Ascolta Ora",
-    play: "Riproduci",
-    listen_on: "Ascolta sulle Piattaforme Streaming"
+  title: "LA NOSTRA MUSICA",
+  subtitle: "SCOPRI I NOSTRI ALBUM TRIBUTE E LE CANZONI PIÙ POPOLARI",
+  our_albums: "I NOSTRI ALBUM",
+  popular_songs: "CANZONI POPOLARI",
+  listen_now: "ASCOLTA ORA",
+  play: "RIPRODUCI",
+  listen_on: "ASCOLTA SULLE PIATTAFORME STREAMING"
   },
 
   // Gallery Section
   gallery: {
-    title: "Galleria",
-    subtitle: "Rivivi la magia delle nostre performance",
-    all: "Tutto",
-    concerts: "Concerti", 
-    backstage: "Backstage",
-    fans: "Fan",
-    videos: "Video",
-    rehearsals: "Prove",
-    follow_social: "Seguici sui Social Media",
-    follow_desc: "Rimani aggiornato con le nostre ultime foto, video e contenuti dietro le quinte"
+  title: "GALLERIA",
+  subtitle: "RIVIVI LA MAGIA DELLE NOSTRE PERFORMANCE",
+  all: "TUTTO",
+  concerts: "CONCERTI", 
+  backstage: "BACKSTAGE",
+  fans: "FAN",
+  videos: "VIDEO",
+  rehearsals: "PROVE",
+  follow_social: "SEGUICI SUI SOCIAL MEDIA",
+  follow_desc: "RIMANI AGGIORNATO CON LE NOSTRE ULTIME FOTO, VIDEO E CONTENUTI DIETRO LE QUINTE"
   },
 
   // Downloads Section
   downloads: {
-    title: "Download",
-    subtitle: "Materiali professionali per locali, promoter e media",
-    technical_sheet: "Scheda Tecnica",
-    technical_sheet_desc: "Piano palco completo e requisiti tecnici",
-    poster: "Poster Promozionale",
-    poster_desc: "Poster di alta qualità per la promozione eventi",
-    logo: "Logo Ufficiale",
-    logo_desc: "Logo ufficiale Higher Power in alta risoluzione",
-    banner_horizontal: "Banner Orizzontale", 
-    banner_horizontal_desc: "Perfetto per siti web e copertine social media",
-    banner_square: "Banner Quadrato",
-    banner_square_desc: "Ideale per post Instagram e formati quadrati",
-    banner_vertical: "Banner Verticale",
-    banner_vertical_desc: "Ottimo per storie e display verticali",
-    download: "Scarica",
-    need_more: "Hai bisogno di materiali aggiuntivi o formati personalizzati?",
-    contact_us: "Contattaci"
+  title: "DOWNLOAD",
+  subtitle: "MATERIALI PROFESSIONALI PER LOCALI, PROMOTER E MEDIA",
+  technical_sheet: "SCHEDA TECNICA",
+  technical_sheet_desc: "PIANO PALCO COMPLETO E REQUISITI TECNICI",
+  poster: "POSTER PROMOZIONALE",
+  poster_desc: "POSTER DI ALTA QUALITÀ PER LA PROMOZIONE EVENTI",
+  logo: "LOGO UFFICIALE",
+  logo_desc: "LOGO UFFICIALE HIGHER POWER IN ALTA RISOLUZIONE",
+  banner_horizontal: "BANNER ORIZZONTALE", 
+  banner_horizontal_desc: "PERFETTO PER SITI WEB E COPERTINE SOCIAL MEDIA",
+  banner_square: "BANNER QUADRATO",
+  banner_square_desc: "IDEALE PER POST INSTAGRAM E FORMATI QUADRATI",
+  banner_vertical: "BANNER VERTICALE",
+  banner_vertical_desc: "OTTIMO PER STORIE E DISPLAY VERTICALI",
+  download: "SCARICA",
+  need_more: "HAI BISOGNO DI MATERIALI AGGIUNTIVI O FORMATI PERSONALIZZATI?",
+  contact_us: "CONTATTACI"
   },
 
   // Contact Section
