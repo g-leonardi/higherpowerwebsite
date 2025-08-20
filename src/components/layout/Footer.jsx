@@ -42,62 +42,39 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-grid animate-fade-in-up">
           {/* Brand Section */}
-          <div className="footer-brand group">
-            <h3 className="footer-title group-hover:scale-105 group-hover:text-yellow-300 transition-all duration-500">
-              Higher Power
-            </h3>
-            <p className="text-muted mb-4 text-muted-hover">
-              {t('footer.description')}
-            </p>
-            <p className="text-gray-400 text-sm text-muted-hover">
-              {t('footer.tribute_disclaimer')}
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="group">
-            <h4 className="text-lg font-semibold mb-4 text-secondary hover:text-cyan-300 transition-colors duration-300">
-              {t('footer.quick_links')}
-            </h4>
-            <ul className="footer-links">
-              {footerLinks.map(({ label, href }) => (
-                <li key={label}>
-                  <a 
-                    href={href} 
-                    className="footer-link hover:text-cyan-400 hover:translate-x-2 inline-block hover:font-medium transition-all duration-300"
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Social & Contact */}
-          <div className="group">
-            <h4 className="text-lg font-semibold mb-4 text-primary hover:text-yellow-300 transition-colors duration-300">
-              {t('footer.follow_us')}
-            </h4>
-            <div className="footer-social">
-              {socialIcons.map(({ name, path }) => (
-                <a 
-                  key={name}
-                  href="#" 
-                  className="text-muted hover:text-yellow-400 hover:scale-125 hover:rotate-12 hover:-translate-y-1 transition-all duration-300"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d={path} />
-                  </svg>
-                </a>
-              ))}
+          <div className="group" style={{ width: '100%' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+              <span className="text-base font-semibold mb-2 text-primary hover:text-yellow-300 transition-colors duration-300" style={{ minWidth: '120px' }}>
+                {t('footer.follow_us')}
+              </span>
+              
             </div>
-            <div className="text-gray-400 text-sm space-y-1 text-muted-hover">
-              <p className="hover:text-cyan-400 transition-colors duration-200">
-                {t('footer.email')}: info@higherpower.band
-              </p>
-              <p className="hover:text-cyan-400 transition-colors duration-200">
-                {t('footer.phone')}: +39 123 456 7890
-              </p>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+              <div className="text-gray-400 text-xs space-y-1 text-muted-hover" style={{ fontSize: '0.8rem' }}>
+                <p className="hover:text-cyan-400 transition-colors duration-200">
+                  {t('footer.email')}: info@higherpower.band
+                </p>
+                <p className="hover:text-cyan-400 transition-colors duration-200">
+                  {t('footer.phone')}: +39 123 456 7890
+                </p>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                <div className="footer-social" style={{ gap: '0.7rem', justifyContent: 'flex-end', display: 'flex' }}>
+                  {socialIcons.map(({ name, path }) => (
+                    <a 
+                      key={name}
+                      href="#" 
+                      className="text-muted hover:text-yellow-400 hover:scale-110 transition-all duration-300"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d={path} />
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -105,7 +82,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="footer-bottom animate-fade-in-up animation-delay-500">
           <p className="text-gray-400 text-sm mb-4 md:mb-0 text-muted-hover">
-            &copy; 2025 Higher Power. {t('footer.rights_reserved')}
+            &copy; 2025 Higher Power. {t('footer.rights_reserved')} This is a tribute band. We are not affiliated with Coldplay.
           </p>
           <div className="flex items-center space-x-2 text-gray-400 text-sm group">
             <span className="text-muted-hover">{t('footer.made_with')}</span>

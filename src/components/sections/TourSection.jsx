@@ -65,9 +65,6 @@ export default function TourSection() {
           <h2 className="section-title animate-glow">
             {t('tour.title')}
           </h2>
-          <p className="section-subtitle animate-fade-in-up animation-delay-200">
-            {t('tour.subtitle')}
-          </p>
         </div>
 
         {/* Tour Dates - Scrollable Container */}

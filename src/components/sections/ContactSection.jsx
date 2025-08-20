@@ -95,8 +95,7 @@ export default function ContactSection() {
         </div>
       </div>
 
-      <div className="floating-element contact-blob-1"></div>
-      <div className="floating-element contact-blob-2"></div>
+  {/* Blobs rimossi */}
     </section>
   )
 }

@@ -6,8 +6,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section">
       <div className="section-bg-elements">
-        <div className="floating-blob blob-1"></div>
-        <div className="floating-blob blob-2"></div>
+  {/* Blobs rimossi */}
       </div>
       
       <div className="section-container">

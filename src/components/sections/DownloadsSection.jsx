@@ -75,10 +75,7 @@ export default function DownloadsSection() {
 
   return (
     <section id="downloads" className="section downloads-section">
-      <div className="section-bg-elements">
-        <div className="floating-blob blob-purple"></div>
-        <div className="floating-blob blob-orange"></div>
-      </div>
+  {/* Sfondo e blobs rimossi */}
       
       <div className="section-container">
         <div className="section-header">
@@ -134,8 +131,7 @@ export default function DownloadsSection() {
         </div>
       </div>
 
-      <div className="floating-element downloads-blob-1"></div>
-      <div className="floating-element downloads-blob-2"></div>
+  {/* Blobs rimossi */}
     </section>
   )
 }
