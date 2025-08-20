@@ -548,19 +548,20 @@ input, textarea, select, code, pre, .no-uppercase {
   }
 
   /* ===== SECTION LAYOUTS ===== */
+
+
   .section {
-  position: relative;
-  padding: 8rem 0;
-  /* background rimosso */
-  overflow: visible;
-  scroll-margin-top: 150px;
-  min-height: 900px;
-}
-section.section {
-  padding: 8rem 0 4.5rem 0;
-  overflow: visible;
-  scroll-margin-top: 150px;
-  min-height: 900px;
+    position: relative;
+    padding: 8rem 0;
+    /* background rimosso */
+    overflow: visible;
+    min-height: 900px;
+  }
+
+  section.section {
+    padding: 8rem 0 4.5rem 0;
+    overflow: visible;
+    min-height: 900px;
   }
 
 
@@ -575,11 +576,12 @@ section.section {
   }
 
   .section-container {
-  max-width: 1680px;
+    max-width: 1680px;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
     z-index: 10;
+    scroll-margin-top: 140px; /* offset per header fisso */
   }
 
   .section-header {
@@ -944,6 +946,8 @@ section.section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  /* Slightly higher than center; reduced offset */
+  object-position: center 40%;
     border-radius: 18px;
     transition: transform 0.3s ease;
   }

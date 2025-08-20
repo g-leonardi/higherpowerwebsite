@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2025-08-15",
+    "venue": "Teatro Romano",
+    "city": "Verona, Italy",
+    "eventUrl": "https://example.com/verona-concert"
+  },
+  {
+    "date": "2025-08-22",
+    "venue": "O2 Arena",
+    "city": "London, UK",
+    "eventUrl": "https://example.com/london-concert"
+  },
+  {
+    "date": "2025-09-05",
+    "venue": "Mediolanum Forum",
+    "city": "Milano, Italy",
+    "eventUrl": "https://example.com/milano-concert"
+  },
+  {
+    "date": "2025-09-12",
+    "venue": "AccorHotels Arena",
+    "city": "Paris, France",
+    "eventUrl": "https://example.com/paris-concert"
+  },
+  {
+    "date": "2025-09-19",
+    "venue": "Mercedes-Benz Arena",
+    "city": "Berlin, Germany",
+    "eventUrl": "https://example.com/berlin-concert"
+  },
+  {
+    "date": "2025-09-26",
+    "venue": "Ziggo Dome",
+    "city": "Amsterdam, Netherlands",
+    "eventUrl": "https://example.com/amsterdam-concert"
+  }
+]

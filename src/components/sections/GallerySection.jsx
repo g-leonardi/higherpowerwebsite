@@ -53,9 +53,7 @@ export default function GallerySection() {
           <h2 className="section-title animate-glow">
             {t('gallery.title')}
           </h2>
-          <p className="section-subtitle animate-fade-in-up animation-delay-200">
-            {t('gallery.subtitle')}
-          </p>
+          
         </div>
 
         {/* Filter Buttons - Modern 2025 Style */}

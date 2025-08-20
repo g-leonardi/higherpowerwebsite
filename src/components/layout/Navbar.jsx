@@ -26,7 +26,9 @@ export default function Navbar() {
     <header className="nav-header">
       <div className="nav-container">
         <h1 className="nav-logo">
-          Higher Power
+          <a href="#" aria-label="Higher Power Home">
+            <img src="/HigherLogo.png" alt="Higher Power" style={{ height: '64px', width: 'auto' }} />
+          </a>
         </h1>
 
         {/* Desktop Menu */}

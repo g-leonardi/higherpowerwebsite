@@ -1,52 +1,29 @@
+
 import { useTranslation } from 'react-i18next'
+import { useEffect, useState } from 'react'
 
 export default function TourSection() {
   const { t } = useTranslation()
+  const [tourDates, setTourDates] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
-  const tourDates = [
-    {
-      date: "2025-08-15",
-      venue: "Teatro Romano",
-      city: "Verona, Italy",
-      eventUrl: "https://example.com/verona-concert"
-    },
-    {
-      date: "2025-08-22", 
-      venue: "O2 Arena",
-      city: "London, UK",
-      eventUrl: "https://example.com/london-concert"
-    },
-    {
-      date: "2025-09-05",
-      venue: "Mediolanum Forum", 
-      city: "Milano, Italy",
-      eventUrl: "https://example.com/milano-concert"
-    },
-    {
-      date: "2025-09-12",
-      venue: "AccorHotels Arena",
-      city: "Paris, France", 
-      eventUrl: "https://example.com/paris-concert"
-    },
-    {
-      date: "2025-09-19",
-      venue: "Mercedes-Benz Arena",
-      city: "Berlin, Germany",
-      eventUrl: "https://example.com/berlin-concert"
-    },
-    {
-      date: "2025-09-26", 
-      venue: "Ziggo Dome",
-      city: "Amsterdam, Netherlands",
-      eventUrl: "https://example.com/amsterdam-concert"
-    }
-  ]
+  useEffect(() => {
+    fetch('/tourDates.json')
+      .then((res) => {
+        if (!res.ok) throw new Error('Network error')
+        return res.json()
+      })
+      .then((data) => setTourDates(data))
+      .catch((err) => setError(err))
+      .finally(() => setLoading(false))
+  }, [])
 
   const formatDate = (dateString) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('it-IT', {
       weekday: 'short',
-      year: 'numeric', 
+      year: 'numeric',
       month: 'short',
       day: 'numeric'
     })
@@ -70,7 +47,19 @@ export default function TourSection() {
         {/* Tour Dates - Scrollable Container */}
         <div className="tour-container">
           <div className="tour-scroll-wrapper">
-            {tourDates.map((concert, index) => (
+            {loading && (
+              <div className="tour-card tour-card-placeholder animate-fade-in-up">
+                <div className="tour-card-content text-center text-muted">Loading events...</div>
+              </div>
+            )}
+            {!loading && !error && tourDates.length === 0 && (
+              <div className="tour-card tour-card-placeholder animate-fade-in-up">
+                <div className="tour-card-content text-center text-lg font-semibold text-primary">
+                  {t('tour.no_events')}
+                </div>
+              </div>
+            )}
+            {!loading && !error && tourDates.map((concert, index) => (
               <div
                 key={index}
                 className="tour-card"
@@ -90,7 +79,6 @@ export default function TourSection() {
                       </div>
                     </div>
                   </div>
-                  
                   <div className="tour-action">
                     <a
                       href={concert.eventUrl}
@@ -104,6 +92,11 @@ export default function TourSection() {
                 </div>
               </div>
             ))}
+            {error && (
+              <div className="tour-card tour-card-placeholder animate-fade-in-up">
+                <div className="tour-card-content text-center text-danger">Error loading events.</div>
+              </div>
+            )}
           </div>
         </div>
 

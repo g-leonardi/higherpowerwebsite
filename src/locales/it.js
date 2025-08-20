@@ -32,7 +32,7 @@ export default {
     member1: { name: "LUCA SIGNORI", role: "VOCE E PIANO" },
     member2: { name: "DANIELE BARRESI", role: "BASSO E CORI" },
     member3: { name: "GIUSEPPE (PEO) LEONARDI", role: "CHITARRA SOLISTA" },
-    member4: { name: "ALFRED MONTANARI TROVESI", role: "BATTERIA" }
+    member4: { name: "ALFREDO MONTANARI TROVESI", role: "BATTERIA" }
   },
 
   // Tour Section
@@ -45,6 +45,7 @@ export default {
   contact_booking: "CONTATTA PER PRENOTAZIONI",
   booking_question: "VUOI PRENOTARCI PER IL TUO LOCALE O EVENTO?",
   contact_us_bookings: "CONTATTACI PER PRENOTAZIONI"
+  ,no_events: "Resta sintonizzato! Presto nuovi eventi in arrivo."
   },
 
   // Music Section
@@ -60,16 +61,14 @@ export default {
 
   // Gallery Section
   gallery: {
-  title: "GALLERIA",
-  subtitle: "RIVIVI LA MAGIA DELLE NOSTRE PERFORMANCE",
-  all: "TUTTO",
-  concerts: "CONCERTI", 
-  backstage: "BACKSTAGE",
-  fans: "FAN",
-  videos: "VIDEO",
-  rehearsals: "PROVE",
-  follow_social: "SEGUICI SUI SOCIAL MEDIA",
-  follow_desc: "RIMANI AGGIORNATO CON LE NOSTRE ULTIME FOTO, VIDEO E CONTENUTI DIETRO LE QUINTE"
+    title: "GALLERIA",
+    subtitle: "RIVIVI LA MAGIA DELLE NOSTRE PERFORMANCE",
+    all: "TUTTO",
+    concerts: "CONCERTI",
+    backstage: "BACKSTAGE",
+    fans: "FAN",
+    follow_social: "SEGUICI SUI SOCIAL MEDIA",
+    follow_desc: "RIMANI AGGIORNATO CON LE NOSTRE ULTIME FOTO, VIDEO E CONTENUTI DIETRO LE QUINTE"
   },
 
   // Downloads Section

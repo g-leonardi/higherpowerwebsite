@@ -44,7 +44,7 @@ export default function AboutSection() {
             <div className="about-quadrotto-image">
               <div className="photo-frame">
                 <img 
-                  src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&crop=center"
+                  src="/photos/laBand.jpg"
                   alt="Higher Power Band performing live"
                   className="band-photo-img"
                 />
@@ -57,8 +57,8 @@ export default function AboutSection() {
               <div className="member-card-horizontal">
                 <div className="member-avatar-small">
                   <img 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
-                    alt="Band member"
+                    src="/photos/BandMembers/Luca.png"
+                    alt={t('about.member1.name')}
                     className="member-photo"
                   />
                 </div>
@@ -70,8 +70,8 @@ export default function AboutSection() {
               <div className="member-card-horizontal">
                 <div className="member-avatar-small">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
-                    alt="Band member"
+                    src="/photos/BandMembers/Dani.png"
+                    alt={t('about.member2.name')}
                     className="member-photo"
                   />
                 </div>
@@ -83,8 +83,8 @@ export default function AboutSection() {
               <div className="member-card-horizontal">
                 <div className="member-avatar-small">
                   <img 
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
-                    alt="Band member"
+                    src="/photos/BandMembers/Peo.png"
+                    alt={t('about.member3.name')}
                     className="member-photo"
                   />
                 </div>
@@ -96,8 +96,8 @@ export default function AboutSection() {
               <div className="member-card-horizontal">
                 <div className="member-avatar-small">
                   <img 
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face"
-                    alt="Band member"
+                    src="/photos/BandMembers/Alfred.png"
+                    alt={t('about.member4.name')}
                     className="member-photo"
                   />
                 </div>
