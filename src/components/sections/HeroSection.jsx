@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import useAuroraMode from '../../hooks/useAuroraMode'
 
 export default function HeroSection() {
@@ -7,9 +7,49 @@ export default function HeroSection() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
   const aurora = useAuroraMode()
 
-  const normalSrc = 'https://www.youtube.com/embed/DnfpHyLbQqc?autoplay=1&mute=0'
-  const auroraSrc = 'https://www.youtube.com/embed/d-wksP8UFZw?si=2yTRvxBSvzEXxnTZ&start=14&autoplay=1&mute=0'
+  // Use muted autoplay to satisfy browser policies; we'll unmute on first user interaction via postMessage
+  const normalSrc = 'https://www.youtube.com/embed/DnfpHyLbQqc?si=rrpDWznDKVekVt7o&start=0&autoplay=1&mute=1&enablejsapi=1&playsinline=1'
+  const auroraSrc = 'https://www.youtube.com/embed/d-wksP8UFZw?si=2yTRvxBSvzEXxnTZ&start=14&autoplay=1&mute=1&enablejsapi=1&playsinline=1'
   const videoSrc = aurora ? auroraSrc : normalSrc
+  const iframeRef = useRef(null)
+
+  // On first user interaction, unmute and play via the YouTube IFrame API postMessage
+  useEffect(() => {
+    const sendCmd = (func) => {
+      const iframe = iframeRef.current
+      if (!iframe || !iframe.contentWindow) return
+      try {
+        iframe.contentWindow.postMessage(
+          JSON.stringify({ event: 'command', func, args: [] }),
+          '*'
+        )
+      } catch {}
+    }
+
+    let used = false
+    const onInteract = () => {
+      if (used) return
+      used = true
+      // Try a few times to account for player readiness timing
+      sendCmd('unMute')
+      sendCmd('playVideo')
+      const t1 = setTimeout(() => { sendCmd('unMute'); sendCmd('playVideo') }, 250)
+      const t2 = setTimeout(() => { sendCmd('unMute'); sendCmd('playVideo') }, 750)
+      window.removeEventListener('pointerdown', onInteract)
+      window.removeEventListener('keydown', onInteract)
+      window.removeEventListener('touchstart', onInteract)
+      // Cleanup any retries after success
+      setTimeout(() => { clearTimeout(t1); clearTimeout(t2) }, 1000)
+    }
+    window.addEventListener('pointerdown', onInteract, { once: true })
+    window.addEventListener('keydown', onInteract, { once: true })
+    window.addEventListener('touchstart', onInteract, { once: true })
+    return () => {
+      window.removeEventListener('pointerdown', onInteract)
+      window.removeEventListener('keydown', onInteract)
+      window.removeEventListener('touchstart', onInteract)
+    }
+  }, [])
 
   return (
     <section className="hero">
@@ -45,6 +85,7 @@ export default function HeroSection() {
                 key={videoSrc}
                 className="showreel-video"
                 src={videoSrc}
+                ref={iframeRef}
                 title={aurora ? 'Aurora Mode Feature Video' : 'Higher Power - European Coldplay Tribute Band'}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
