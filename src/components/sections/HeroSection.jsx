@@ -8,7 +8,7 @@ export default function HeroSection() {
   const aurora = useAuroraMode()
 
   // Use muted autoplay to satisfy browser policies; we'll unmute on first user interaction via postMessage
-  const normalSrc = 'https://www.youtube.com/embed/DnfpHyLbQqc?si=rrpDWznDKVekVt7o&start=0&autoplay=1&mute=1&enablejsapi=1&playsinline=1'
+  const normalSrc = 'https://www.youtube.com/embed/DnfpHyLbQqc?si=rrpDWznDKVekVt7o&start=0&autoplay=1&mute=0&enablejsapi=1&playsinline=1'
   const auroraSrc = 'https://www.youtube.com/embed/d-wksP8UFZw?si=2yTRvxBSvzEXxnTZ&start=14&autoplay=1&mute=0&enablejsapi=1&playsinline=1'
   const videoSrc = aurora ? auroraSrc : normalSrc
   const iframeRef = useRef(null)
