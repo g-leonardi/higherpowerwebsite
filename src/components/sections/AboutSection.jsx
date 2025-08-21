@@ -1,7 +1,19 @@
 import { useTranslation } from 'react-i18next'
+import useAuroraMode from '../../hooks/useAuroraMode'
 
 export default function AboutSection() {
   const { t } = useTranslation()
+  const aurora = useAuroraMode()
+
+  const getMemberSrc = (file) => aurora
+    ? `/photos/altBandMembers/${file}`
+    : `/photos/BandMembers/${file}`
+
+  const onImgError = (e, file) => {
+    // Prevent infinite loop then fallback to default image
+    e.currentTarget.onerror = null
+    e.currentTarget.src = `/photos/BandMembers/${file}`
+  }
 
   return (
     <section id="about" className="section">
@@ -44,7 +56,7 @@ export default function AboutSection() {
             <div className="about-quadrotto-image">
               <div className="photo-frame">
                 <img 
-                  src="/photos/laBand.jpg"
+                  src={aurora ? "/photos/laBandAlt.png" : "/photos/laBand.jpg"}
                   alt="Higher Power Band performing live"
                   className="band-photo-img"
                 />
@@ -57,7 +69,8 @@ export default function AboutSection() {
               <div className="member-card-horizontal">
                 <div className="member-avatar-small">
                   <img 
-                    src="/photos/BandMembers/Luca.png"
+                    src={getMemberSrc('Luca.png')}
+                    onError={(e) => onImgError(e, 'Luca.png')}
                     alt={t('about.member1.name')}
                     className="member-photo"
                   />
@@ -70,7 +83,8 @@ export default function AboutSection() {
               <div className="member-card-horizontal">
                 <div className="member-avatar-small">
                   <img 
-                    src="/photos/BandMembers/Dani.png"
+                    src={getMemberSrc('Dani.png')}
+                    onError={(e) => onImgError(e, 'Dani.png')}
                     alt={t('about.member2.name')}
                     className="member-photo"
                   />
@@ -83,7 +97,8 @@ export default function AboutSection() {
               <div className="member-card-horizontal">
                 <div className="member-avatar-small">
                   <img 
-                    src="/photos/BandMembers/Peo.png"
+                    src={getMemberSrc('Peo.png')}
+                    onError={(e) => onImgError(e, 'Peo.png')}
                     alt={t('about.member3.name')}
                     className="member-photo"
                   />
@@ -96,7 +111,8 @@ export default function AboutSection() {
               <div className="member-card-horizontal">
                 <div className="member-avatar-small">
                   <img 
-                    src="/photos/BandMembers/Alfred.png"
+                    src={getMemberSrc('Alfred.png')}
+                    onError={(e) => onImgError(e, 'Alfred.png')}
                     alt={t('about.member4.name')}
                     className="member-photo"
                   />

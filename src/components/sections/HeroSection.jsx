@@ -1,9 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
+import useAuroraMode from '../../hooks/useAuroraMode'
 
 export default function HeroSection() {
   const { t } = useTranslation()
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
+  const aurora = useAuroraMode()
+
+  const normalSrc = 'https://www.youtube.com/embed/DnfpHyLbQqc?autoplay=1&mute=0'
+  const auroraSrc = 'https://www.youtube.com/embed/d-wksP8UFZw?si=2yTRvxBSvzEXxnTZ&start=14&autoplay=1&mute=0'
+  const videoSrc = aurora ? auroraSrc : normalSrc
 
   return (
     <section className="hero">
@@ -34,13 +40,15 @@ export default function HeroSection() {
         <div className="hero-video-section">
           <div className="video-container">
             <div className="video-wrapper">
-              {/* YouTube embed for demonstration */}
+              {/* YouTube embed (swaps when Aurora Mode is active) */}
               <iframe
+                key={videoSrc}
                 className="showreel-video"
-                src="https://www.youtube.com/embed/DnfpHyLbQqc?autoplay=1&mute=0"
-                title="Higher Power - European Coldplay Tribute Band"
+                src={videoSrc}
+                title={aurora ? 'Aurora Mode Feature Video' : 'Higher Power - European Coldplay Tribute Band'}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               ></iframe>
               
