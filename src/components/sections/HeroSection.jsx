@@ -5,6 +5,7 @@ import useAuroraMode from '../../hooks/useAuroraMode'
 export default function HeroSection() {
   const { t } = useTranslation()
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const aurora = useAuroraMode()
 
   // Use muted autoplay to satisfy browser policies; we'll unmute on first user interaction via postMessage
@@ -12,6 +13,17 @@ export default function HeroSection() {
   const auroraSrc = 'https://www.youtube.com/embed/d-wksP8UFZw?si=2yTRvxBSvzEXxnTZ&start=14&autoplay=1&mute=0&enablejsapi=1&playsinline=1'
   const videoSrc = aurora ? auroraSrc : normalSrc
   const iframeRef = useRef(null)
+
+  // Detect mobile viewport to change video placement
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 768px)')
+    const apply = () => setIsMobile(mq.matches)
+    apply()
+    mq.addEventListener ? mq.addEventListener('change', apply) : mq.addListener(apply)
+    return () => {
+      mq.removeEventListener ? mq.removeEventListener('change', apply) : mq.removeListener(apply)
+    }
+  }, [])
 
   // On first user interaction, unmute and play via the YouTube IFrame API postMessage
   useEffect(() => {
@@ -51,8 +63,27 @@ export default function HeroSection() {
     }
   }, [])
 
+  const videoBlock = (
+    <div className="video-container">
+      <div className="video-wrapper">
+        {/* YouTube embed (swaps when Aurora Mode is active) */}
+        <iframe
+          key={videoSrc}
+          className="showreel-video"
+          src={videoSrc}
+          ref={iframeRef}
+          title={aurora ? 'Aurora Mode Feature Video' : 'Higher Power - European Coldplay Tribute Band'}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+  )
+
   return (
-    <section className="hero">
+    <section className="section hero">
       <div className="hero-bg-animation"></div>
       <div className="hero-floating-elements">
         <div className="floating-blob blob-1"></div>
@@ -69,6 +100,11 @@ export default function HeroSection() {
           <p className="hero-subtitle">
             {t('hero.subtitle')}
           </p>
+          {isMobile && (
+            <div className="hero-video-section" style={{ marginTop: '1rem', marginBottom: '1.25rem' }}>
+              {videoBlock}
+            </div>
+          )}
           <div className="hero-actions">
             <a href="#tour" className="hero-cta primary">
               {t('hero.button')}
@@ -76,40 +112,12 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right Side - Showreel Video */}
-        <div className="hero-video-section">
-          <div className="video-container">
-            <div className="video-wrapper">
-              {/* YouTube embed (swaps when Aurora Mode is active) */}
-              <iframe
-                key={videoSrc}
-                className="showreel-video"
-                src={videoSrc}
-                ref={iframeRef}
-                title={aurora ? 'Aurora Mode Feature Video' : 'Higher Power - European Coldplay Tribute Band'}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-              
-              {/* Alternative: You can replace with your own video file */}
-              {/* 
-              <video 
-                className="showreel-video"
-                poster="/path/to/your/video-thumbnail.jpg"
-                controls
-                preload="metadata"
-                onLoadedData={() => setIsVideoLoaded(true)}
-              >
-                <source src="/path/to/your/showreel.mp4" type="video/mp4" />
-                <source src="/path/to/your/showreel.webm" type="video/webm" />
-                Your browser does not support the video tag.
-              </video>
-              */}
-            </div>
+        {/* Right Side - Showreel Video (desktop/tablet only) */}
+        {!isMobile && (
+          <div className="hero-video-section">
+            {videoBlock}
           </div>
-        </div>
+        )}
       </div>
     </section>
   )

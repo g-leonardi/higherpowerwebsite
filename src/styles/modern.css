@@ -151,7 +151,7 @@ input, textarea, select, code, pre, .no-uppercase {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+  z-index: 10050; /* above aurora overlays (9999) */
     background: rgba(10, 10, 10, 0.7);
     backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -172,6 +172,7 @@ input, textarea, select, code, pre, .no-uppercase {
     font-weight: 800;
     background: linear-gradient(135deg, #00f5ff, #ff00aa, #ffaa00);
     background-size: 300% 300%;
+  /* Desktop: hide minimal list rule moved globally */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -508,13 +509,29 @@ input, textarea, select, code, pre, .no-uppercase {
 
   @media (max-width: 768px) {
     .hero-container {
-      padding: 0 1rem;
-      gap: 2rem;
+  padding: calc(var(--nav-h, 80px) + 1rem) 1.25rem 3rem; /* more breathing space */
+  gap: 2.25rem;
+  justify-items: stretch; /* let children span full width */
+  width: 100%;
     }
 
     .hero-actions {
   justify-content: center;
     }
+
+  .hero-content, .hero-video-section, .video-container { width:100%; margin:0; }
+  .hero-video-section { display:block; }
+    .hero-title { white-space:normal; text-align:center; }
+    /* Force hero-content to occupy full horizontal space */
+    .hero-content {
+      width: 100% !important;
+      max-width: none !important;
+      grid-column: 1 / -1;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-content > * { width: 100%; }
 
     .hero-cta {
       padding: 1rem 2rem;
@@ -668,6 +685,49 @@ input, textarea, select, code, pre, .no-uppercase {
       gap: 1.5rem;
       margin-top: 1.5rem;
       margin-bottom: 2rem;
+    }
+
+    /* About: full-width and centered content on mobile */
+    #about .section-container {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #about .section-header,
+    #about .about-wrapper,
+    #about .about-quadrotto-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    #about .about-quadrotto-content {
+      align-items: center;
+    }
+    #about .about-quadrotto-text,
+    #about .about-quadrotto-image,
+    #about .band-photo,
+    #about .photo-frame {
+      width: 100%;
+      max-width: none;
+    }
+
+    /* Ensure About section is centered and not stuck to the left edge */
+    .section#about .section-container,
+    #about .section-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: none;
+    }
+
+    .about-wrapper,
+    .about-quadrotto-content,
+    .about-quadrotto-text,
+    .about-quadrotto-image {
+      width: 100%;
     }
 
     .about-bio {
@@ -978,7 +1038,7 @@ input, textarea, select, code, pre, .no-uppercase {
 
   .members-row {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
     width: 100%;
     max-width: none;
@@ -1384,6 +1444,96 @@ input, textarea, select, code, pre, .no-uppercase {
     transition: all 0.3s ease;
     animation: fadeInUp 0.6s ease-out;
     animation-fill-mode: both;
+
+  /* Mobile compression for tour list: show more cards on initial viewport */
+  @media (max-width: 639px) {
+    .tour-scroll-wrapper {
+      max-height: none; /* let it expand but cards are shorter */
+      gap: 0.55rem;
+      padding-right: 0.25rem;
+    }
+    .tour-card {
+      padding: 0.75rem 0.85rem;
+      border-radius: 12px;
+    }
+    .tour-card-content { gap: 0.9rem; }
+    .tour-info { gap: 0.8rem; }
+    .tour-date {
+      padding: 0.45rem 0.55rem;
+      font-size: 0.65rem;
+      min-width: 66px;
+      line-height: 1.05;
+      border-radius: 9px;
+      box-shadow: 0 3px 8px rgba(0,245,255,0.25);
+    }
+    .venue-name {
+      font-size: 0.82rem;
+      margin-bottom: 0.15rem;
+    }
+    .venue-city {
+      font-size: 0.6rem;
+      line-height: 1.1;
+    }
+    .tour-btn {
+      padding: 0.5rem 0.85rem;
+      font-size: 0.55rem;
+      letter-spacing: 0.4px;
+      border-radius: 16px;
+    }
+    .tour-action { align-self: stretch; display: flex; align-items: center; }
+  }
+
+  /* === Alternative ultra-compact mobile tour card design === */
+  @media (max-width: 639px) {
+    .tour-card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.55rem 0.6rem 0.6rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: none;
+    }
+    .tour-card:hover { transform: none; background: rgba(255,255,255,0.06); }
+    .tour-card-content { gap: 0.55rem; }
+    .tour-info { gap: 0.55rem; }
+    .tour-date {
+      padding: 0.35rem 0.45rem;
+      font-size: 0.58rem;
+      min-width: 54px;
+      border-radius: 8px;
+      line-height: 1.05;
+      box-shadow: none;
+      letter-spacing: 0.5px;
+    }
+    .venue-name {
+      font-size: 0.74rem;
+      margin: 0 0 0.05rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 140px;
+    }
+    .venue-city {
+      font-size: 0.55rem;
+      line-height: 1;
+      letter-spacing: 0.3px;
+      color: rgba(255,255,255,0.55);
+    }
+    .tour-btn {
+      padding: 0.4rem 0.55rem;
+      font-size: 0.5rem;
+      border-radius: 14px;
+      background: linear-gradient(120deg,#ff00aa,#ffd700 90%);
+      letter-spacing: 0.4px;
+      box-shadow: none;
+    }
+    .tour-btn:active { transform: scale(0.95); }
+    .tour-action { align-self: center; }
+    /* Reduce gap between cards further */
+    .tour-scroll-wrapper { gap: 0.4rem; }
+  }
   }
 
   .tour-date-card:hover {
@@ -2233,7 +2383,12 @@ input, textarea, select, code, pre, .no-uppercase {
     }
 
     .section-container {
-      padding: 0 1rem;
+      width: 100%;
+      max-width: none; /* allow full-bleed */
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -2590,6 +2745,50 @@ input, textarea, select, code, pre, .no-uppercase {
     max-height: calc(45vh - 2rem);
   }
 
+  /* Mobile 3x3 tighter squares */
+  @media (max-width: 639px) {
+    .gallery-container-3x3 {
+      height: auto;
+      padding: 0.6rem 0.5rem 0.9rem;
+      background: transparent;
+      border: none;
+      backdrop-filter: none;
+      margin: 0.5rem auto 1rem;
+    }
+    .gallery-grid-3x3 {
+      gap: 0.4rem;
+      max-height: none;
+      height: auto;
+      aspect-ratio: 1/1; /* ensures a compact square grid area */
+    }
+    .gallery-grid-3x3 .card {
+      border-radius: 10px;
+      height: 100%;
+      aspect-ratio: 1/1;
+      padding: 0 !important;
+      background: none;
+    }
+    .gallery-image-container-full,
+    .gallery-grid-3x3 .card .gallery-image-container,
+    .gallery-grid-3x3 .card .gallery-image-container-full {
+      border-radius: 10px;
+      aspect-ratio: 1/1;
+    }
+    .gallery-grid-3x3 img, .gallery-grid-3x3 picture, .gallery-grid-3x3 video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Hide tag badges for ultra-clean quadretti */
+    .gallery-tag-overlay { display: none; }
+    /* Remove click hint and overlay on mobile for clean grid */
+    .gallery-overlay, .click-hint { display: none !important; }
+    /* Force background image container to fill */
+    .gallery-grid-3x3 .gallery-image { width: 100%; height: 100%; }
+    .gallery-grid-3x3 .gallery-image { transform: none !important; }
+    .gallery-grid-3x3 .card:hover .gallery-image { transform: none; }
+  }
+
   .gallery-grid-3x3 .card {
     display: flex;
     flex-direction: column;
@@ -2936,28 +3135,15 @@ input, textarea, select, code, pre, .no-uppercase {
   }
 
   @media (max-width: 480px) {
-    .gallery-container-3x3 {
-      height: 35vh;
-      padding: 0.6rem;
-      margin: 0.5rem auto;
-    }
-    
+    .gallery-container-3x3 { height: auto; padding: 0.4rem 0.4rem 0.7rem; }
     .gallery-grid-3x3 {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(9, 1fr);
-      gap: 0.3rem;
-      max-height: calc(35vh - 1.2rem);
+      grid-template-columns: repeat(3, 1fr) !important;
+      grid-template-rows: repeat(3, 1fr) !important;
+      gap: 0.35rem !important;
+      max-height: none;
+      height: auto;
     }
-
-    .gallery-tag-overlay {
-      top: 0.2rem;
-      left: 0.2rem;
-    }
-
-    .gallery-tag-overlay-badge {
-      font-size: 0.5rem;
-      padding: 0.15rem 0.3rem;
-    }
+    .gallery-grid-3x3 .card { aspect-ratio: 1/1; }
 
     .gallery-filters {
       margin-bottom: 0.8rem;
@@ -2983,6 +3169,41 @@ input, textarea, select, code, pre, .no-uppercase {
     gap: 1.5rem;
   max-width: 1600px;
     margin: 0 auto;
+  }
+  /* Desktop/base: hide mobile downloads list */
+  .downloads-list-mobile { display: none; }
+
+  /* Mobile minimal list replaces grid */
+  @media (max-width: 639px) {
+    .downloads-grid { display: none !important; }
+    .download-card { display: none !important; }
+    .downloads-list-mobile { display: flex !important; }
+    .downloads-list-mobile {
+      flex-direction: column;
+      gap: 0.45rem;
+      margin: 0.5rem 0 1.2rem;
+    }
+    .downloads-list-mobile-item {
+      display: grid;
+      grid-template-columns: 26px 1fr auto;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.6rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      font-size: 0.75rem;
+      line-height: 1.05;
+    }
+    .downloads-list-mobile-item:nth-child(odd){background:rgba(255,255,255,0.035);}
+    .dlm-icon { font-size: 0.95rem; opacity: .85; }
+    .dlm-title { font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; letter-spacing:.25px; }
+    .dlm-btn {
+      background: linear-gradient(120deg,#ff00aa,#ffd700);
+      color:#000; border:none; font-size:0.6rem; padding:0.32rem 0.5rem; border-radius:7px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 2px 5px rgba(0,0,0,0.25); transition:transform .18s ease;
+    }
+    .dlm-btn:active { transform:scale(.9); }
+    #downloads.section .section-container { padding-top: .4rem; }
   }
 
   .download-card {
@@ -3112,6 +3333,33 @@ input, textarea, select, code, pre, .no-uppercase {
       grid-template-rows: repeat(3, 1fr);
       max-width: 800px;
     }
+  }
+
+  /* Global mobile width clamping: ensure components don't exceed device width */
+  @media (max-width: 768px) {
+    .section-container,
+    .hero-container,
+    .about-wrapper,
+    .about-quadrotto-content,
+    .about-quadrotto-stats,
+    .members-row,
+    .tour-cards-wrapper,
+    .downloads-grid,
+    .contact-grid,
+    .gallery-grid,
+    .download-card,
+    .contact-card,
+    .contact-form-compact,
+    .contact-form-catchy,
+    .about-bio,
+    .photo-frame {
+      max-width: 100vw !important;
+      width: 100% !important;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    body, html { overflow-x: hidden; }
   }
 
   @media (max-width: 768px) {

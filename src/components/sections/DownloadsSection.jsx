@@ -84,7 +84,23 @@ export default function DownloadsSection() {
           </h2>
         </div>
 
-        <div className="downloads-grid">
+        {/* Minimal mobile list (shown only on small screens via CSS) */}
+  <div className="downloads-list-mobile">
+          {downloads.map(item => (
+            <div key={item.id} className="downloads-list-mobile-item">
+              <span className="dlm-icon" aria-hidden="true">{item.icon}</span>
+              <span className="dlm-title" title={item.title}>{item.title}</span>
+              <button
+                className="dlm-btn"
+                onClick={() => handleDownload(item)}
+                aria-label={`${t('downloads.download')} ${item.title}`}
+                title={t('downloads.download')}
+              >⬇️</button>
+            </div>
+          ))}
+        </div>
+
+  <div className="downloads-grid">
           {downloads.map((item, index) => (
             <div
               key={item.id}

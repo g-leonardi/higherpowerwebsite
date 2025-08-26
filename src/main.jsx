@@ -11,6 +11,18 @@ if (typeof window !== 'undefined' && !window.__HP_CONSOLE_HELLO__) {
   console.log('%cHint:', 'color:#facc15; font-weight:bold;', 'Try the Konami Code and choose your destiny: ↑↑↓↓←→←→BA')
 }
 
+// Global demo helper: window.helloWord([name]) => logs & returns a greeting
+if (typeof window !== 'undefined' && !window.helloWord) {
+  window.helloWord = function helloWord(name = 'World') {
+    const timestamp = new Date().toISOString()
+    const msg = `Hello ${name}! (helloWord demo) — ${timestamp}`
+    console.log('%cHELLO%c ' + msg, 'background:#00f5ff;color:#000;padding:2px 6px;border-radius:4px;font-weight:700;', 'color:#fff;font-weight:500;')
+    return msg
+  }
+  // Small hint so remote viewers know it's available
+  console.log('%cType %chelloWord()%c in the console to test the demo helper.', 'color:#38bdf8;font-weight:600;', 'color:#facc15;font-weight:700;', 'color:#38bdf8;')
+}
+
 // Fun console pixel art for Konami activation
 const printMortalKonsole = () => {
   try {
