@@ -1,7 +1,41 @@
 import { useTranslation } from 'react-i18next'
+import { useState } from 'react'
 
 export default function ContactSection() {
   const { t } = useTranslation()
+
+  // Inserisci il tuo numero WhatsApp in formato internazionale senza + (es: 393331112233)
+  const WHATSAPP_NUMBER = '393001112222'
+
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
+
+  const update = (k, v) => setForm(f => ({ ...f, [k]: v }))
+
+  const buildWhatsAppText = () => {
+    return [
+      '🔥 HIGHER POWER – NUOVO CONTATTO',
+      `👤 Nome: ${form.name || '-'}`,
+      `📧 Email: ${form.email || '-'}`,
+      `📱 Tel: ${form.phone || '-'}`,
+      '',
+      '💬 Messaggio:',
+      form.message || '-',
+      '',
+      '— Inviato dal sito'
+    ].join('\n')
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) return
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsAppText())}`
+    window.open(url, '_blank', 'noopener')
+  }
 
   return (
     <section id="contact" className="contact-section">
@@ -21,14 +55,14 @@ export default function ContactSection() {
             <div className="contact-icon">✉️</div>
             <h3 className="contact-method-title">{t('contact.email_us')}</h3>
             <p className="contact-detail">info@higherpower.band</p>
-            <button className="contact-btn">{t('contact.send_email')}</button>
+            <a href="mailto:info@higherpower.band" className="contact-btn">{t('contact.send_email')}</a>
           </div>
 
           <div className="contact-card glass-card">
             <div className="contact-icon">📱</div>
             <h3 className="contact-method-title">{t('contact.call_us')}</h3>
             <p className="contact-detail">+39 123 456 7890</p>
-            <button className="contact-btn">{t('contact.call_now')}</button>
+            <a href="tel:+391234567890" className="contact-btn">{t('contact.call_now')}</a>
           </div>
 
           <div className="contact-card glass-card">
@@ -47,32 +81,44 @@ export default function ContactSection() {
                 <p className="form-subtitle-catchy">{t('contact.magic_subtitle')}</p>
               </div>
             </div>
-            <form className="catchy-form">
+            <form className="catchy-form" onSubmit={onSubmit}>
               <div className="form-row">
                 <input 
                   type="text" 
                   className="form-input-catchy"
                   placeholder={t('contact.name_placeholder')}
+                  value={form.name}
+                  onChange={e=>update('name', e.target.value)}
+                  required
                 />
                 <input 
                   type="email" 
                   className="form-input-catchy"
                   placeholder={t('contact.email_placeholder')}
+                  value={form.email}
+                  onChange={e=>update('email', e.target.value)}
+                  required
                 />
                 <input 
                   type="tel" 
                   className="form-input-catchy"
                   placeholder={t('contact.phone_placeholder')}
+                  value={form.phone}
+                  onChange={e=>update('phone', e.target.value)}
                 />
               </div>
               <textarea 
                 className="form-textarea-catchy"
                 placeholder={t('contact.message_placeholder')}
+                value={form.message}
+                onChange={e=>update('message', e.target.value)}
+                required
               ></textarea>
               <button type="submit" className="form-submit-catchy">
-                <span className="btn-text">{t('contact.launch_event')}</span>
-                <span className="btn-icon">🚀</span>
+                <span className="btn-text">WhatsApp</span>
+                <span className="btn-icon" aria-hidden="true">💬</span>
               </button>
+              <p className="whats-hint">Si apre WhatsApp con il messaggio precompilato.</p>
             </form>
           </div>
 
