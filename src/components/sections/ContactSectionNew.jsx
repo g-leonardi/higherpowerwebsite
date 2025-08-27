@@ -72,14 +72,14 @@ export default function ContactSection() {
                 <div className="method-icon">📧</div>
                 <div className="method-info">
                   <h4>{t('contact.email_us')}</h4>
-                  <p>info@higherpower.band</p>
+                  <p>higherpowercoldplay@libero.it</p>
                 </div>
               </div>
               <div className="contact-method">
                 <div className="method-icon">📞</div>
                 <div className="method-info">
                   <h4>{t('contact.call_us')}</h4>
-                  <p>+39 123 456 7890</p>
+                  <p>+39 349 212 4446</p>
                 </div>
               </div>
               <div className="contact-method">
