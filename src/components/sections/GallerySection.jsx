@@ -25,15 +25,15 @@ export default function GallerySection() {
   ]
 
   const galleryItems = [
-    { id: 1, category: 'concerts', type: 'image', title: 'Live at Teatro Romano', image: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&h=400&fit=crop&crop=center' },
-    { id: 2, category: 'backstage', type: 'image', title: 'Preparing for the show', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=center' },
-    { id: 3, category: 'fans', type: 'image', title: 'Happy fans after show', image: 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=400&fit=crop&crop=center' },
-    { id: 4, category: 'concerts', type: 'image', title: 'Crowd singing Yellow', image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop&crop=center' },
-    { id: 5, category: 'concerts', type: 'image', title: 'Fix You performance', image: 'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=400&h=400&fit=crop&crop=center' },
-    { id: 6, category: 'backstage', type: 'image', title: 'Band rehearsal', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=center' },
-    { id: 7, category: 'concerts', type: 'image', title: 'Viva La Vida finale', image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=400&fit=crop&crop=center' },
-    { id: 8, category: 'fans', type: 'image', title: 'Meet & greet session', image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=400&fit=crop&crop=center' },
-    { id: 9, category: 'backstage', type: 'image', title: 'Sound check moments', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=400&fit=crop&crop=center' },
+    { id: 1, category: 'backstage', type: 'image', title: 'Photo 1', image: '/photos/gallery/high1.jpeg' },
+    { id: 2, category: 'concerts', type: 'image', title: 'Photo 2', image: '/photos/gallery/high2.jpeg' },
+    { id: 3, category: 'fans', type: 'image', title: 'Photo 3', image: '/photos/gallery/high3.jpeg' },
+    { id: 4, category: 'concerts', type: 'image', title: 'Photo 4', image: '/photos/gallery/high4.jpeg' },
+    { id: 5, category: 'backstage', type: 'image', title: 'Photo 5', image: '/photos/gallery/high5.jpeg' },
+    { id: 6, category: 'concerts', type: 'image', title: 'Photo 6', image: '/photos/gallery/high6.jpeg' },
+    { id: 7, category: 'concerts', type: 'image', title: 'Photo 7', image: '/photos/gallery/high7.jpg' },
+    { id: 8, category: 'concerts', type: 'image', title: 'Photo 8', image: '/photos/gallery/high8.jpg' },
+    { id: 9, category: 'fans', type: 'image', title: 'Photo 9', image: '/photos/gallery/high9.jpg' },
   ]
 
   const filteredItems = activeFilter === 'all' 
