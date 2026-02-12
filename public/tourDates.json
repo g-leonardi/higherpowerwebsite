@@ -1,17 +1,5 @@
 [
   {
-    "date": "2026-01-24",
-    "venue": "Festa dello sport",
-    "city": "Albino (BG), Italy",
-    "eventUrl": "https://example.com/verona-concert"
-  },
-  {
-    "date": "2026-02-07",
-    "venue": "Big Max",
-    "city": "Parona, (PV) Italy",
-    "eventUrl": "https://www.facebook.com/bigmaxlivemusic/?locale=it_IT"
-  },
-  {
     "date": "2026-03-27",
     "venue": "Irish house",
     "city": "Kaiserslautern, Germany",
@@ -35,10 +23,28 @@
     "city": "Grassobbio (BG), Italy",
     "eventUrl": "#"
   },
+   {
+    "date": "2026-06-15",
+    "venue": "Teatro di Cellatica",
+    "city": "Cellatica (BS), Italy",
+    "eventUrl": "https://www.cipiesse-bs.it/eventi/categoria/eventi/"
+  },
   {
     "date": "2026-06-26",
     "venue": "Locanda by night",
     "city": "Vallalta Albino (BG), Italy",
     "eventUrl": "https://www.facebook.com/VallAltaMedievale/?locale=it_IT"
+  },
+   {
+    "date": "2026-06-22",
+    "venue": "Sangio fest",
+    "city": "Chiari (BS), Italy",
+    "eventUrl": "https://www.panesalamina.com/sangiofest-chiari-3-2025.html"
+  },
+  {
+    "date": "2026-08-30",
+    "venue": "Lago di Garda",
+    "city": "TBD",
+    "eventUrl": "#"
   }
 ]
