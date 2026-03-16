@@ -12,7 +12,7 @@
     "eventUrl": "https://lestock.be/"
   },
   {
-    "date": "2026-04-24",
+    "date": "2026-04-25",
     "venue": "Rock on the road",
     "city": "Desio (MB), Italy",
     "eventUrl": "https://rockontheroad.it/"
@@ -30,10 +30,28 @@
     "eventUrl": "https://www.panesalamina.com/sangiofest-chiari-3-2025.html"
   },
   {
+    "date": "2026-06-06",
+    "venue": "Sagra dal Scarpasoun",
+    "city": "Reggio Emilia (RE), Italy",
+    "eventUrl": "https://www.instagram.com/sagra_dal_scarpasoun/"
+  },
+  {
     "date": "2026-06-12",
     "venue": "Festa della comunità",
     "city": "Grassobbio (BG), Italy",
-    "eventUrl": "#"
+    "eventUrl": "https://www.instagram.com/comunitainfesta/?__d=1%2F%3Fhidemenu%3Dtrue"
+  },  
+  {
+    "date": "2026-06-19",
+    "venue": "Big Max",
+    "city": "Parona (VR), Italy",
+    "eventUrl": "https://www.facebook.com/bigmaxlivemusic/?locale=it_IT"
+  }, 
+  {
+    "date": "2026-06-20",
+    "venue": "ChorusLife Arena",
+    "city": "Bergamo (BG), Italy",
+    "eventUrl": "https://choruslife.com/it/areas/arena"
   },
   {
     "date": "2026-06-26",
