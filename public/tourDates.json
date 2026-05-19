@@ -1,29 +1,5 @@
 [
   {
-    "date": "2026-03-27",
-    "venue": "Irish house",
-    "city": "Kaiserslautern, Germany",
-    "eventUrl": "https://irishhouse-kl.de/"
-  },
-  {
-    "date": "2026-03-28",
-    "venue": "Le Stock",
-    "city": "La Louvière, Belgium",
-    "eventUrl": "https://lestock.be/"
-  },
-  {
-    "date": "2026-04-25",
-    "venue": "Rock on the road",
-    "city": "Desio (MB), Italy",
-    "eventUrl": "https://rockontheroad.it/"
-  },
-  {
-    "date": "2026-05-15",
-    "venue": "Teatro di Cellatica",
-    "city": "Cellatica (BS), Italy",
-    "eventUrl": "https://www.cipiesse-bs.it/eventi/categoria/eventi/"
-  },
-   {
     "date": "2026-05-22",
     "venue": "Sangio fest",
     "city": "Chiari (BS), Italy",
@@ -40,13 +16,13 @@
     "venue": "Festa della comunità",
     "city": "Grassobbio (BG), Italy",
     "eventUrl": "https://www.instagram.com/comunitainfesta/?__d=1%2F%3Fhidemenu%3Dtrue"
-  },  
+  },
   {
     "date": "2026-06-19",
     "venue": "Big Max",
     "city": "Parona (VR), Italy",
     "eventUrl": "https://www.facebook.com/bigmaxlivemusic/?locale=it_IT"
-  }, 
+  },
   {
     "date": "2026-06-20",
     "venue": "ChorusLife Arena",
@@ -60,9 +36,21 @@
     "eventUrl": "https://www.facebook.com/VallAltaMedievale/?locale=it_IT"
   },
   {
+    "date": "2026-08-28",
+    "venue": "Festa Oratorio Nembro",
+    "city": "Nembro (BG), Italy",
+    "eventUrl": "https://www.oratorionembro.org/"
+  },
+  {
     "date": "2026-08-30",
     "venue": "Antica fiera di Sommacampagna",
     "city": "Sommacampagna (VR), Italy",
     "eventUrl": "https://www.comune.sommacampagna.vr.it/notizie/Antica-Fiera-di-Sommacampagna--2025.html"
+  },
+  {
+    "date": "2026-09-18",
+    "venue": "Festa dell’Uva",
+    "city": "Lago di Garda, Italy",
+    "eventUrl": "https://www.garda-see.com/it/temi/piaceri/vini-vigneti/festa-dell-uva-e-del-vino"
   }
 ]
